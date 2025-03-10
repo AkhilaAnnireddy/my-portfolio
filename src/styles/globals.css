@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Root Variables */
+:root {
+    --color-primary: #00ff99;
+    --color-secondary: #00aaff;
+    --color-bg: #0a0a0a;
+    --color-text: white;
+}
+
+/* Global Styles */
+html, body {
+    height: 100%;
+    overflow-y: auto !important; /* Ensure scrolling is enabled */
+    scroll-behavior: smooth;
+    @apply bg-[var(--color-bg)] text-[var(--color-text)] font-sans;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, var(--color-primary), var(--color-secondary));
+    border-radius: 4px;
+    animation: pulseScroll 2s infinite;
+}
+
+/* Blue Themed Scrollbar */
+.scrollbar-blue::-webkit-scrollbar {
+    width: 8px;
+}
+
+.scrollbar-blue::-webkit-scrollbar-track {
+    background: #b3d9ff;
+}
+
+.scrollbar-blue::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #4a90e2, #007aff);
+    border-radius: 5px;
+}
+
+/* Scrollbar Animation */
+@keyframes pulseScroll {
+    0% { opacity: 1; }
+    50% { opacity: 0.6; }
+    100% { opacity: 1; }
+}
+
+/* Links */
+a {
+    @apply text-[var(--color-primary)] no-underline transition duration-300;
+}
+
+a:hover {
+    @apply underline;
+}
+
+/* Hide Next.js Dev Indicator */
+#__next-build-watcher,
+#__next-build-indicator {
+    display: none !important;
+}
+
+/* Horizontal Scrolling Animation */
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+.animate-scroll {
+    display: flex;
+    gap: 2rem;
+    animation: scroll 50s linear infinite;
+    width: max-content;
+}
+
+/* Layered Styling */
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
+@layer utilities {
+    .bg-clip-text {
+        -webkit-background-clip: text;
+        background-clip: text;
+    }
+}
+
+/* Default List Styles */
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* Smooth Page Transitions */
+.fade-enter-active, .fade-leave-active {
+    transition: opacity 0.5s;
+}
+.fade-enter, .fade-leave-to {
+    opacity: 0;
+}
+
+/* Glassmorphism Effect */
+.glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 16px;
+}
+
+/* Custom Button Styles */
+.button-primary {
+    @apply px-6 py-3 bg-[var(--color-primary)] text-black font-semibold rounded-lg transition duration-300;
+}
+
+.button-primary:hover {
+    @apply bg-[var(--color-secondary)] text-white;
+}
