@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { useRef } from "react";
 import profilephoto from "../public/profile_pic.png";
+import developerAssociate from "../public/developer_assciate.png";
+import cloudPractioner from "../public/cloud_practioner.png";
 import {
   Globe,
   Server,
@@ -15,6 +17,13 @@ import {
   Wrench,
   PenTool,
   Award,
+  Lightbulb,
+  HeartHandshake,
+  Brain,
+  Users,
+  Book,
+  Rocket,
+  Code,
 } from "lucide-react";
 
 export default function Hero() {
@@ -211,7 +220,6 @@ export default function Hero() {
         </motion.div>
       </motion.section>
 
-      {/* Work Experience Section */}
       <motion.section
         ref={aboutRef}
         className="py-20 px-8 bg-gradient-to-b from-blue-200 to-blue-400 text-blue-700"
@@ -220,7 +228,7 @@ export default function Hero() {
         transition={{ duration: 1 }}
       >
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-16 text-blue-400">
+          <h2 className="text-3xl font-bold text-center mb-16 text-blue-400">
             Work Experience
           </h2>
 
@@ -231,14 +239,14 @@ export default function Hero() {
               className="relative pl-8 before:absolute before:left-0 before:top-0 before:bottom-0 before:w-px before:bg-blue-500"
             >
               <div className="absolute left-0 top-0 w-2 h-2 bg-blue-500 rounded-full transform -translate-x-1/2"></div>
-              <h3 className="text-2xl font-semibold text-blue-900">
+              <h3 className="text-xl font-semibold text-blue-900">
                 Backend Developer
               </h3>
-              <p className="text-blue-700">
+              <p className="text-blue-700 text-lg">
                 Center for Innovation and Creativity - CU Boulder
               </p>
-              <p className="text-blue-600">Jan 2025 – Present</p>
-              <ul className="list-disc text-blue-800 ml-6 mt-2">
+              <p className="text-blue-600 text-sm">Jan 2025 – Present</p>
+              <ul className="list-disc text-blue-800 text-base leading-relaxed ml-6 mt-2">
                 <li>
                   Designed and implemented a video-to-text conversion model
                   using OpenAI Whisper.
@@ -260,12 +268,12 @@ export default function Hero() {
               className="relative pl-8 before:absolute before:left-0 before:top-0 before:bottom-0 before:w-px before:bg-blue-500"
             >
               <div className="absolute left-0 top-0 w-2 h-2 bg-blue-500 rounded-full transform -translate-x-1/2"></div>
-              <h3 className="text-2xl font-semibold text-blue-900">
+              <h3 className="text-xl font-semibold text-blue-900">
                 Software Development Engineer
               </h3>
-              <p className="text-blue-700">JP Morgan Chase & Co.</p>
-              <p className="text-blue-600">Aug 2022 – Aug 2024</p>
-              <ul className="list-disc text-blue-800 ml-6 mt-2">
+              <p className="text-blue-700 text-lg">JP Morgan Chase & Co.</p>
+              <p className="text-blue-600 text-sm">Aug 2022 – Aug 2024</p>
+              <ul className="list-disc text-blue-800 text-base leading-relaxed ml-6 mt-2">
                 <li>
                   Designed & implemented 50+ user stories for an internet-facing
                   client service app.
@@ -295,12 +303,12 @@ export default function Hero() {
               className="relative pl-8 before:absolute before:left-0 before:top-0 before:bottom-0 before:w-px before:bg-blue-500"
             >
               <div className="absolute left-0 top-0 w-2 h-2 bg-blue-500 rounded-full transform -translate-x-1/2"></div>
-              <h3 className="text-2xl font-semibold text-blue-900">
+              <h3 className="text-xl font-semibold text-blue-900">
                 Software Developer Intern
               </h3>
-              <p className="text-blue-700">JP Morgan Chase & Co.</p>
-              <p className="text-blue-600">Feb 2022 – Aug 2022</p>
-              <ul className="list-disc text-blue-800 ml-6 mt-2">
+              <p className="text-blue-700 text-lg">JP Morgan Chase & Co.</p>
+              <p className="text-blue-600 text-sm">Feb 2022 – Aug 2022</p>
+              <ul className="list-disc text-blue-800 text-base leading-relaxed ml-6 mt-2">
                 <li>Developed a Maker-Checker feature using React & Spring.</li>
                 <li>
                   Integrated Jenkins CI/CD pipelines with S3 & Raven
@@ -321,7 +329,7 @@ export default function Hero() {
         className="py-20 px-8 bg-gradient-to-b from-blue-300 to-blue-500"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{duration: 2}}
+        transition={{ duration: 2 }}
       >
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold text-center mb-16 text-blue-700">
@@ -342,20 +350,213 @@ export default function Hero() {
         </div>
       </motion.section>
 
-      {/* Certifications Section */}
-      <motion.section className="py-20 px-8 bg-blue-300 text-blue-900">
-        <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-16">Certifications</h2>
-          <p className="text-lg">
-            <Award className="inline w-6 h-6 text-blue-600 mr-2" /> AWS
-            Certified Developer Associate
-          </p>
-          <p className="text-lg">
-            <Award className="inline w-6 h-6 text-blue-600 mr-2" /> AWS Cloud
-            Practitioner
-          </p>
+      <motion.section
+        className="py-20 px-8 bg-gradient-to-b from-blue-500 to-blue-700 text-blue-300"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl font-bold text-center mb-16">
+            Certifications
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            {/* AWS Developer Associate */}
+            <motion.div
+              whileHover={{ scale: 1.03 }}
+              className="relative bg-white/10 backdrop-blur-lg rounded-xl shadow-lg p-8 flex flex-col items-center text-center transition-all"
+            >
+              <Image
+                src={developerAssociate}
+                alt="AWS Certified Developer Associate"
+                width={320} // Larger for better visibility
+                height={200}
+                className="rounded-lg shadow-md"
+              />
+              <h3 className="text-2xl font-semibold mt-6 text-blue-300">
+                AWS Certified Developer Associate
+              </h3>
+              <a
+                href="https://aws.amazon.com/verification" // Replace with actual certification link
+                target="_blank"
+                className="mt-3 inline-block px-5 py-2 text-sm font-medium text-blue-500 bg-blue-300 rounded-lg shadow-md hover:bg-blue-200 transition"
+              >
+                Verify Certification
+              </a>
+            </motion.div>
+
+            {/* AWS Cloud Practitioner */}
+            <motion.div
+              whileHover={{ scale: 1.03 }}
+              className="relative bg-white/10 backdrop-blur-lg rounded-xl shadow-lg p-8 flex flex-col items-center text-center transition-all"
+            >
+              <Image
+                src={cloudPractioner}
+                alt="AWS Certified Cloud Practitioner"
+                width={320}
+                height={200}
+                className="rounded-lg shadow-md"
+              />
+              <h3 className="text-2xl font-semibold mt-6 text-blue-300">
+                AWS Certified Cloud Practitioner
+              </h3>
+              <a
+                href="https://aws.amazon.com/verification" // Replace with actual certification link
+                target="_blank"
+                className="mt-3 inline-block px-5 py-2 text-sm font-medium text-blue-500  bg-blue-300 rounded-lg shadow-md hover:bg-blue-200 transition"
+              >
+                Verify Certification
+              </a>
+            </motion.div>
+          </div>
         </div>
       </motion.section>
+    {/* Passion & Goals Section */}
+<motion.section
+  className="py-20 px-8 bg-gradient-to-b from-blue-500 to-blue-700 text-white"
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 1 }}
+>
+  <div className="max-w-6xl mx-auto">
+    <h2 className="text-4xl font-bold text-center mb-16">
+      My Passion & Professional Vision
+    </h2>
+
+    {/* Passion & Goal Cards */}
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <motion.div
+        whileHover={{ scale: 1.02 }}
+        className="p-6 bg-blue-400 rounded-xl shadow-lg"
+      >
+        <div className="flex items-center space-x-4 mb-4">
+          <Code2 className="w-8 h-8 text-white" />
+          <h3 className="text-xl font-semibold">Full Stack + AI</h3>
+        </div>
+        <p className="text-gray-100">
+          Passionate about merging AI with full-stack development to create scalable,
+          data-driven, and intelligent applications that enhance user experiences.
+        </p>
+      </motion.div>
+
+      <motion.div
+        whileHover={{ scale: 1.02 }}
+        className="p-6 bg-blue-500 rounded-xl shadow-lg"
+      >
+        <div className="flex items-center space-x-4 mb-4">
+          <Brain className="w-8 h-8 text-white" />
+          <h3 className="text-xl font-semibold">AI & Problem Solving</h3>
+        </div>
+        <p className="text-gray-100">
+          Exploring the intersection of machine learning and real-world applications to drive 
+          innovation, optimize processes, and solve complex business challenges.
+        </p>
+      </motion.div>
+    </div>
+
+    {/* What I Bring to a Team */}
+    <h3 className="text-3xl font-bold text-center mt-20">
+      What I Bring to a Team
+    </h3>
+    <p className="text-lg text-center text-gray-200 mt-4 max-w-3xl mx-auto">
+      I believe in **building with impact**—bringing technical expertise, problem-solving, and a 
+      collaborative spirit to every project. Here’s what sets me apart:
+    </p>
+
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 text-center">
+      {/* Problem-Solving */}
+      <motion.div
+        whileHover={{ scale: 1.05 }}
+        className="p-6 bg-blue-300 rounded-xl shadow-lg"
+      >
+        <Lightbulb className="w-12 h-12 text-white mx-auto mb-4" />
+        <h3 className="text-xl font-semibold text-white">Analytical Thinking</h3>
+        <p className="text-gray-100">
+          I approach challenges with a data-driven mindset, identifying patterns and optimizing 
+          solutions for real-world impact.
+        </p>
+      </motion.div>
+
+      {/* Leadership & Ownership */}
+      <motion.div
+        whileHover={{ scale: 1.05 }}
+        className="p-6 bg-blue-400 rounded-xl shadow-lg"
+      >
+        <Users className="w-12 h-12 text-white mx-auto mb-4" />
+        <h3 className="text-xl font-semibold text-white">Leadership & Initiative</h3>
+        <p className="text-gray-100">
+          I take ownership of projects, drive team collaboration, and ensure tasks are executed 
+          with excellence.
+        </p>
+      </motion.div>
+
+      {/* Technical Expertise */}
+      <motion.div
+        whileHover={{ scale: 1.05 }}
+        className="p-6 bg-blue-500 rounded-xl shadow-lg"
+      >
+        <Code className="w-12 h-12 text-white mx-auto mb-4" />
+        <h3 className="text-xl font-semibold text-white">Technical Excellence</h3>
+        <p className="text-gray-100">
+          With expertise in **AI, full-stack development, and cloud solutions**, I deliver 
+          high-quality, scalable applications.
+        </p>
+      </motion.div>
+    </div>
+
+    {/* Core Values */}
+    <h3 className="text-3xl font-bold text-center mt-20">
+      Why Having Me on a Team Matters
+    </h3>
+    <p className="text-lg text-center text-gray-200 mt-4 max-w-3xl mx-auto">
+      My approach is simple: **blend technology with purpose**. I bring passion, efficiency, 
+      and creativity to every team I work with.
+    </p>
+
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 text-center">
+      {/* Collaboration */}
+      <motion.div
+        whileHover={{ scale: 1.05 }}
+        className="p-6 bg-blue-300 rounded-xl shadow-lg"
+      >
+        <HeartHandshake className="w-12 h-12 text-white mx-auto mb-4" />
+        <h3 className="text-xl font-semibold text-white">Team-First Mentality</h3>
+        <p className="text-gray-100">
+          I thrive in collaborative environments, ensuring seamless communication 
+          and efficient teamwork.
+        </p>
+      </motion.div>
+
+      {/* Innovation & Learning */}
+      <motion.div
+        whileHover={{ scale: 1.05 }}
+        className="p-6 bg-blue-400 rounded-xl shadow-lg"
+      >
+        <BrainCircuit className="w-12 h-12 text-white mx-auto mb-4" />
+        <h3 className="text-xl font-semibold text-white">Innovative Mindset</h3>
+        <p className="text-gray-100">
+          I constantly push boundaries, experimenting with **emerging technologies** to drive innovation.
+        </p>
+      </motion.div>
+
+      {/* Adaptability */}
+      <motion.div
+        whileHover={{ scale: 1.05 }}
+        className="p-6 bg-blue-500 rounded-xl shadow-lg"
+      >
+        <Rocket className="w-12 h-12 text-white mx-auto mb-4" />
+        <h3 className="text-xl font-semibold text-white">Adaptability & Growth</h3>
+        <p className="text-gray-100">
+          Fast-paced environments excite me—I adapt, **learn quickly**, and 
+          contribute meaningfully from day one.
+        </p>
+      </motion.div>
+    </div>
+  </div>
+</motion.section>
+
+
     </div>
   );
 }
