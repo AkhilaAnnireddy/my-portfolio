@@ -4,32 +4,32 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { BookOpen, Calendar, User } from "lucide-react";
 
-// Sample blog data (Replace this with dynamic content later)
 const blogs = [
   {
     id: 1,
-    title: "Understanding Machine Learning: A Beginner’s Guide",
+    title: "Deploying Machine Learning Models Using AWS Lambda and S3",
     author: "Akhila Annireddy",
-    date: "March 10, 2025",
-    description: "An introduction to ML concepts, algorithms, and their real-world applications.",
-    link: "/blog/machine-learning",
+    date: "April 11, 2025",
+    description: "Learn how to deploy ML models with AWS Lambda and S3 for scalable, serverless inference pipelines.",
+    link: "/blog/deploy-ml-lambda-s3",
   },
   {
     id: 2,
-    title: "AWS vs Azure: Choosing the Right Cloud Platform",
+    title: "A Developer's Guide to SCIM API for User Provisioning",
     author: "Akhila Annireddy",
-    date: "March 5, 2025",
-    description: "A detailed comparison of AWS and Azure to help you pick the best cloud solution.",
-    link: "/blog/aws-vs-azure",
+    date: "April 15, 2025",
+    description: "Explore how SCIM API simplifies identity management and automates user provisioning in modern apps.",
+    link: "/blog/scim",
   },
   {
     id: 3,
-    title: "Building Scalable Web Apps with React & Spring Boot",
+    title: "Runtime Database Switching in Spring Boot for Multi-Tenant Apps",
     author: "Akhila Annireddy",
-    date: "February 28, 2025",
-    description: "A step-by-step guide to integrating React with Spring Boot for scalable web applications.",
-    link: "/blog/react-spring-boot",
-  },
+    date: "April 20, 2025",
+    description: "Master dynamic DB connections in Spring Boot to support multi-tenancy from a single UI.",
+    link: "/blog/multipledb",
+  }
+  
 ];
 
 export default function Blog() {

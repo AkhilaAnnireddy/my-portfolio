@@ -8,39 +8,44 @@ import { Code, ExternalLink } from "lucide-react";
 const projects = [
   {
     id: 1,
-    title: "Predicting Social Effects on Pharmaceutical Wastewater",
-    techStack: ["Machine Learning", "Data Science", "Python", "Pandas", "Scikit-Learn"],
-    description: "Developed a model to analyze social factors affecting pharmaceutical concentrations in wastewater.",
-    link: "https://github.com/AkhilaAnnireddy/pharma-waste-analysis",
+    title: "StackStats",
+    techStack: ["ReactJS", "ChartJS", "Stack Overflow API", "JavaScript"],
+    description:
+      "Built a dynamic portfolio generator that visualizes developer contributions using the Stack Overflow API. Leveraged ChartJS for real-time data visualizations and React for an interactive UI showcasing user statistics and tag-based expertise.",
+    link: "https://github.com/AkhilaAnnireddy/stackstats",
   },
   {
     id: 2,
-    title: "Full-Stack AI Tutoring Platform",
-    techStack: ["React", "Spring Boot", "AWS", "Whisper API", "Next.js"],
-    description: "Built an AI-driven tutoring system that converts videos to transcripts for learning insights.",
-    link: "https://github.com/AkhilaAnnireddy/ai-tutoring-platform",
+    title: "EduBlog",
+    techStack: ["Django", "HTML", "CSS", "Bootstrap", "SQLite"],
+    description:
+      "Built a university-focused social platform where students and professors can share blogs, announcements, and research updates. Implemented authentication, CRUD operations, and comment moderation features with Django’s robust backend.",
+    link: "https://github.com/AkhilaAnnireddy/edublog",
   },
   {
     id: 3,
-    title: "AWS Cloud Migration for Banking Applications",
-    techStack: ["AWS", "DevOps", "Terraform", "CI/CD", "Kubernetes"],
-    description: "Led cloud migration of banking applications to AWS ensuring zero downtime deployment.",
-    link: "https://github.com/AkhilaAnnireddy/aws-migration",
+    title: "Autism Detection using 3D CNN",
+    techStack: ["Python", "Deep Learning", "Keras", "ABIDE Dataset", "fMRI", "3D CNN"],
+    description:
+      "Built a 3D Convolutional Neural Network to classify autism spectrum disorder from ABIDE fMRI brain scan data. Achieved over 90% accuracy by preprocessing medical images and optimizing model architecture for volumetric analysis.",
+    link: "https://github.com/AkhilaAnnireddy/autism-detection-3dcnn"
   },
   {
     id: 4,
-    title: "Real-Time Crime Data Analysis",
-    techStack: ["Python", "Data Visualization", "Pandas", "FBI Crime Data API"],
-    description: "Analyzed FBI crime data and created interactive dashboards for crime trend insights.",
-    link: "https://github.com/AkhilaAnnireddy/crime-data-analysis",
+    title: "StackStats: Developer Engagement Analytics",
+    techStack: ["React", "ChartJS", "Pandas", "Scikit-Learn", "Machine Learning"],
+    description:
+      "Analyzed Stack Overflow user behavior to explore engagement trends, reputation dynamics, and the influence of AI tools like ChatGPT. Built interactive dashboards with React and ChartJS, and applied machine learning models to predict user retention, tag popularity, and activity decline. Provided actionable insights for platform sustainability and growth strategies.",
+    link: "https://github.com/AkhilaAnnireddy/StackStats"
   },
   {
     id: 5,
-    title: "CU Boulder Surplus Storefront",
-    techStack: ["Next.js", "React", "Tailwind CSS", "Firebase"],
-    description: "Developed an e-commerce storefront for CU Boulder surplus property sales.",
-    link: "https://github.com/AkhilaAnnireddy/surplus-store",
-  },
+    title: "Analyzing Crime Trends and Patterns in the U.S.",
+    techStack: ["R", "Data Cleaning", "EDA", "Hypothesis Testing", "Time Series Analysis", "Bootstrapping"],
+    description:
+      "Conducted a comprehensive statistical analysis of crime data across U.S. states from 1979–2023 using FBI Crime Data Explorer. Applied advanced methods including hypothesis testing, bootstrapping, and linear regression to explore regional disparities, time-based crime patterns, and predict future crime rates. Normalized crime metrics per 100,000 population to ensure comparability, and developed actionable insights for policy planning and public safety improvements.",
+    link: "https://github.com/AkhilaAnnireddy/us-crime-trends-analysis"
+  }
 ];
 
 export default function Projects() {
