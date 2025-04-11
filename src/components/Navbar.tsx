@@ -30,7 +30,6 @@ export default function Navbar() {
       className="relative w-full bg-black text-blue-500 shadow-lg z-50"
     >
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center py-5">
-        
         {/* Left: Logo & Name */}
         <motion.div
           initial={{ opacity: 0, x: -20 }}
@@ -48,24 +47,27 @@ export default function Navbar() {
 
         {/* Right: Navigation Links */}
         <div className="hidden md:flex space-x-6">
-          {["Home", "Projects", "Resume", "Blog", "About"].map((item, index) => (
-            <motion.div 
-              key={index} 
-              whileHover={{ scale: 1.1 }} 
-              whileTap={{ scale: 0.9 }}
-            >
-              <Link
-                href={`/${item.toLowerCase()}`}
-                className="text-lg italic text-blue-500 hover:text-blue-400 hover:font-bold transition-all duration-300 ease-in-out"
+          {["Home", "Projects", "Resume", "Blog", "About"].map(
+            (item, index) => (
+              <motion.div
+                key={index}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
               >
-                {item}
-              </Link>
-            </motion.div>
-          ))}
+                <Link
+                  href={`/${item.toLowerCase()}`}
+                  className="text-lg italic text-blue-500 hover:text-blue-400 hover:font-bold transition-all no-underline
+                duration-300 ease-in-out"
+                >
+                  {item}
+                </Link>
+              </motion.div>
+            )
+          )}
         </div>
 
         {/* Mobile Menu Button */}
-        <button 
+        <button
           className="md:hidden text-2xl focus:outline-none text-blue-500"
           onClick={() => setIsOpen(!isOpen)}
         >
@@ -80,15 +82,18 @@ export default function Navbar() {
           animate={{ y: 0, opacity: 1 }}
           className="md:hidden bg-black px-6 py-4 space-y-2"
         >
-          {["Home", "Projects", "Resume", "Blog", "About"].map((item, index) => (
-            <Link
-              href={`/${item.toLowerCase()}`}
-              key={index}
-              className="block text-lg italic text-blue-500 hover:text-blue-400 hover:font-bold transition-all duration-300 ease-in-out"
-            >
-              {item}
-            </Link>
-          ))}
+          {["Home", "Projects", "Resume", "Blog", "About"].map(
+            (item, index) => (
+              <Link
+                href={`/${item.toLowerCase()}`}
+                key={index}
+                className="block text-lg italic text-blue-500 hover:text-blue-400 hover:font-bold transition-all no-underline
+              duration-300 ease-in-out"
+              >
+                {item}
+              </Link>
+            )
+          )}
         </motion.div>
       )}
     </motion.nav>
