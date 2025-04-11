@@ -13,17 +13,14 @@ import {
   IceCream2,
   Star,
   ShoppingBag,
-  Dumbbell,
-  Sparkles,
-  Heart,
   Nut,
   Github,
-    Linkedin,
-    Mail,
+  Linkedin,
+  Mail,
 } from "lucide-react";
 
 export default function About() {
-    const contactRef = useRef(null);
+  const contactRef = useRef(null);
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-100 via-blue-200 to-blue-400 overflow-y-auto scrollbar-blue">
       {/* About Me Section */}
@@ -209,9 +206,13 @@ export default function About() {
           </div>
         </div>
       </motion.section>
-      
+
       {/* Contact Section (Add your referenced code here) */}
-      <section ref={contactRef} id="contact" className="py-20 px-8 bg-gradient-to-b from-transparent to-purple-100">
+      <section
+        ref={contactRef}
+        id="contact"
+        className="py-20 px-8 bg-gradient-to-b from-transparent to-purple-100"
+      >
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-4xl font-bold mb-16 bg-gradient-to-r from-blue-400 to-blue-700 text-transparent bg-clip-text">
             Let's Connect
@@ -245,7 +246,9 @@ export default function About() {
           </div>
           <div className="max-w-4xl mx-auto text-center">
             <blockquote className="text-1xl font-light italic text-gray-800">
-              <footer className="text-lg text-gray-600 mt-4">"In a world full of choices, I'm grateful you chose to stop by."</footer>
+              <footer className="text-lg text-gray-600 mt-4">
+                "In a world full of choices, I'm grateful you chose to stop by."
+              </footer>
             </blockquote>
           </div>
         </div>

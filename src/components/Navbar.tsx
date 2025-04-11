@@ -1,14 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import { motion, useAnimation } from "framer-motion";
+import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
-  const controls = useAnimation();
 
   // Handle Scroll Event
   useEffect(() => {
@@ -62,7 +61,7 @@ export default function Navbar() {
                   {item}
                 </Link>
               </motion.div>
-            )
+            ),
           )}
         </div>
 
@@ -92,7 +91,7 @@ export default function Navbar() {
               >
                 {item}
               </Link>
-            )
+            ),
           )}
         </motion.div>
       )}

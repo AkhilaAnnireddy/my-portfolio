@@ -10,7 +10,8 @@ const blogs = [
     title: "Deploying Machine Learning Models Using AWS Lambda and S3",
     author: "Akhila Annireddy",
     date: "April 11, 2025",
-    description: "Learn how to deploy ML models with AWS Lambda and S3 for scalable, serverless inference pipelines.",
+    description:
+      "Learn how to deploy ML models with AWS Lambda and S3 for scalable, serverless inference pipelines.",
     link: "/blog/deploy-ml-lambda-s3",
   },
   {
@@ -18,7 +19,8 @@ const blogs = [
     title: "A Developer's Guide to SCIM API for User Provisioning",
     author: "Akhila Annireddy",
     date: "April 15, 2025",
-    description: "Explore how SCIM API simplifies identity management and automates user provisioning in modern apps.",
+    description:
+      "Explore how SCIM API simplifies identity management and automates user provisioning in modern apps.",
     link: "/blog/scim",
   },
   {
@@ -26,10 +28,10 @@ const blogs = [
     title: "Runtime Database Switching in Spring Boot for Multi-Tenant Apps",
     author: "Akhila Annireddy",
     date: "April 20, 2025",
-    description: "Master dynamic DB connections in Spring Boot to support multi-tenancy from a single UI.",
+    description:
+      "Master dynamic DB connections in Spring Boot to support multi-tenancy from a single UI.",
     link: "/blog/multipledb",
-  }
-  
+  },
 ];
 
 export default function Blog() {
@@ -48,7 +50,8 @@ export default function Blog() {
             My Blog
           </h1>
           <p className="text-lg text-blue-200">
-            Insights, tutorials, and thoughts on technology, AI, and software development.
+            Insights, tutorials, and thoughts on technology, AI, and software
+            development.
           </p>
         </motion.div>
 
@@ -63,7 +66,9 @@ export default function Blog() {
               whileHover={{ scale: 1.05 }}
               className="p-6 bg-blue-100 rounded-lg shadow-lg hover:shadow-xl transition-shadow text-blue-900"
             >
-              <h2 className="text-2xl font-bold text-blue-900 mb-2">{blog.title}</h2>
+              <h2 className="text-2xl font-bold text-blue-900 mb-2">
+                {blog.title}
+              </h2>
               <div className="flex items-center text-blue-700 text-sm mb-2">
                 <User className="w-4 h-4 mr-1" />
                 {blog.author}
@@ -71,7 +76,10 @@ export default function Blog() {
                 {blog.date}
               </div>
               <p className="text-blue-800 text-sm mb-4">{blog.description}</p>
-              <Link href={blog.link} className="text-blue-700 font-semibold hover:underline flex items-center">
+              <Link
+                href={blog.link}
+                className="text-blue-700 font-semibold hover:underline flex items-center"
+              >
                 Read More →
               </Link>
             </motion.div>

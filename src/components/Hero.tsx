@@ -15,13 +15,10 @@ import {
   BrainCircuit,
   Braces,
   Wrench,
-  PenTool,
-  Award,
   Lightbulb,
   HeartHandshake,
   Brain,
   Users,
-  Book,
   Rocket,
   Code,
 } from "lucide-react";
@@ -423,13 +420,15 @@ export default function Hero() {
                 title: "AWS Certified Developer Associate",
                 image: developerAssociate,
                 alt: "AWS Developer Associate",
-                verifyLink: "https://cp.certmetrics.com/amazon/en/public/verify/credential/02fcacee78034c37ba5f6cbf3a210abe",
+                verifyLink:
+                  "https://cp.certmetrics.com/amazon/en/public/verify/credential/02fcacee78034c37ba5f6cbf3a210abe",
               },
               {
                 title: "AWS Certified Cloud Practitioner",
                 image: cloudPractioner,
                 alt: "AWS Cloud Practitioner",
-                verifyLink: "https://www.credly.com/badges/64977c05-7f1d-4bb6-b9ae-1729ebf943d4/linked_in_profile",
+                verifyLink:
+                  "https://www.credly.com/badges/64977c05-7f1d-4bb6-b9ae-1729ebf943d4/linked_in_profile",
               },
             ].map((cert, index) => (
               <motion.div
