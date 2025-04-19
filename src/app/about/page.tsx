@@ -219,7 +219,7 @@ export default function About() {
           </h2>
           <div className="flex justify-center gap-8">
             <motion.a
-              href="https://github.com/aditi-v79"
+              href="https://github.com/AkhilaAnnireddy"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.1, rotate: 5 }}
@@ -228,7 +228,7 @@ export default function About() {
               <Github className="h-8 w-8" />
             </motion.a>
             <motion.a
-              href="https://linkedin.com/in/aditi-vakeel"
+              href="https://linkedin.com/in/akhilaannireddy"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.1, rotate: -5 }}
@@ -237,7 +237,7 @@ export default function About() {
               <Linkedin className="h-8 w-8" />
             </motion.a>
             <motion.a
-              href="mailto:aditivakeel@gmail.com"
+              href="mailto:akhilaannireddy0605@gmail.com"
               whileHover={{ scale: 1.1, rotate: 5 }}
               className="text-gray-600 hover:text-pink-500 transition-colors"
             >
