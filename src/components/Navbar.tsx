@@ -46,23 +46,21 @@ export default function Navbar() {
 
         {/* Right: Navigation Links */}
         <div className="hidden md:flex space-x-6">
-          {["Home", "Projects", "Resume", "Blog", "About"].map(
-            (item, index) => (
-              <motion.div
-                key={index}
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-              >
-                <Link
-                  href={`/${item.toLowerCase()}`}
-                  className="text-lg italic text-blue-500 hover:text-blue-400 hover:font-bold transition-all no-underline
+          {["Home", "Projects", "Blog", "About"].map((item, index) => (
+            <motion.div
+              key={index}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              <Link
+                href={`/${item.toLowerCase()}`}
+                className="text-lg italic text-blue-500 hover:text-blue-400 hover:font-bold transition-all no-underline
                 duration-300 ease-in-out"
-                >
-                  {item}
-                </Link>
-              </motion.div>
-            ),
-          )}
+              >
+                {item}
+              </Link>
+            </motion.div>
+          ))}
         </div>
 
         {/* Mobile Menu Button */}
@@ -81,18 +79,16 @@ export default function Navbar() {
           animate={{ y: 0, opacity: 1 }}
           className="md:hidden bg-black px-6 py-4 space-y-2"
         >
-          {["Home", "Projects", "Resume", "Blog", "About"].map(
-            (item, index) => (
-              <Link
-                href={`/${item.toLowerCase()}`}
-                key={index}
-                className="block text-lg italic text-blue-500 hover:text-blue-400 hover:font-bold transition-all no-underline
+          {["Home", "Projects", "Blog", "About"].map((item, index) => (
+            <Link
+              href={`/${item.toLowerCase()}`}
+              key={index}
+              className="block text-lg italic text-blue-500 hover:text-blue-400 hover:font-bold transition-all no-underline
               duration-300 ease-in-out"
-              >
-                {item}
-              </Link>
-            ),
-          )}
+            >
+              {item}
+            </Link>
+          ))}
         </motion.div>
       )}
     </motion.nav>

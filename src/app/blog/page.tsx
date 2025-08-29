@@ -36,7 +36,7 @@ const blogs = [
 
 export default function Blog() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-black via-blue-900 to-blue-300 p-8 text-white">
+    <div className="min-h-screen bg-black p-8 text-blue-200">
       <div className="max-w-6xl mx-auto">
         {/* Header Section */}
         <motion.div
@@ -45,11 +45,11 @@ export default function Blog() {
           transition={{ duration: 1 }}
           className="text-center"
         >
-          <h1 className="text-5xl font-bold mb-4">
-            <BookOpen className="inline w-10 h-10 text-blue-400 mr-2" />
+          <h1 className="text-5xl font-bold mb-4 text-blue-400">
+            <BookOpen className="inline w-10 h-10 text-blue-500 mr-2" />
             My Blog
           </h1>
-          <p className="text-lg text-blue-200">
+          <p className="text-lg text-blue-300">
             Insights, tutorials, and thoughts on technology, AI, and software
             development.
           </p>
@@ -64,21 +64,21 @@ export default function Blog() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
               whileHover={{ scale: 1.05 }}
-              className="p-6 bg-blue-100 rounded-lg shadow-lg hover:shadow-xl transition-shadow text-blue-900"
+              className="p-6 bg-gray-900 border border-blue-900/40 rounded-lg shadow-lg hover:shadow-xl transition-shadow text-blue-200"
             >
-              <h2 className="text-2xl font-bold text-blue-900 mb-2">
+              <h2 className="text-2xl font-bold text-blue-300 mb-2">
                 {blog.title}
               </h2>
-              <div className="flex items-center text-blue-700 text-sm mb-2">
+              <div className="flex items-center text-blue-400 text-sm mb-2">
                 <User className="w-4 h-4 mr-1" />
                 {blog.author}
                 <Calendar className="w-4 h-4 ml-4 mr-1" />
                 {blog.date}
               </div>
-              <p className="text-blue-800 text-sm mb-4">{blog.description}</p>
+              <p className="text-blue-300 text-sm mb-4">{blog.description}</p>
               <Link
                 href={blog.link}
-                className="text-blue-700 font-semibold hover:underline flex items-center"
+                className="text-blue-400 font-semibold hover:underline flex items-center"
               >
                 Read More →
               </Link>
