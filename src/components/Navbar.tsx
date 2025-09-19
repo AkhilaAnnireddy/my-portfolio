@@ -40,7 +40,7 @@ export default function Navbar() {
             AA
           </div>
           <span className="text-3xl font-bold italic tracking-wide text-blue-500">
-            Akhila Annireddy.
+            Akhila Annireddy
           </span>
         </motion.div>
 
