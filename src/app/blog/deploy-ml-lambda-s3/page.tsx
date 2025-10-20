@@ -1,6 +1,6 @@
 export default function DeployMLLambdaS3Article() {
   return (
-    <div className="min-h-screen px-6 py-12 bg-gradient-to-b from-black to-blue-900 text-white">
+    <div className="min-h-screen px-6 py-12 bg-black text-white">
       <div className="max-w-4xl mx-auto">
         <h1 className="text-4xl font-bold mb-4">
           Deploying Machine Learning Models Using AWS Lambda and S3

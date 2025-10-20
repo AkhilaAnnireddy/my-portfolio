@@ -1,6 +1,6 @@
 export default function SCIMArticle() {
   return (
-    <div className="min-h-screen px-6 py-12 bg-gradient-to-b from-black via-blue-900 to-blue-700 text-white">
+    <div className="min-h-screen px-6 py-12 bg-black text-white">
       <div className="max-w-4xl mx-auto">
         <h1 className="text-4xl font-bold mb-4">
           A Developer's Guide to SCIM API for User Provisioning

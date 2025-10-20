@@ -1,6 +1,6 @@
 export default function SpringDBSwitchingBlog() {
   return (
-    <div className="min-h-screen px-6 py-12 bg-gradient-to-b from-black via-blue-900 to-blue-700 text-white">
+    <div className="min-h-screen px-6 py-12 bg-black text-white">
       <div className="max-w-4xl mx-auto">
         <h1 className="text-4xl font-bold mb-4">
           Runtime Database Switching in Spring Boot for Multi-Tenant Apps
@@ -43,9 +43,9 @@ export default function SpringDBSwitchingBlog() {
         </h2>
         <p className="mb-4 text-blue-100">
           In a multi-database setup, each tenant is associated with a different
-          `DataSource`. When a request is made, the app dynamically routes to
-          the correct `DataSource` based on a tenant identifier (from headers,
-          JWT token, etc).
+          <code> DataSource</code>. When a request is made, the app dynamically
+          routes to the correct <code>DataSource</code> based on a tenant
+          identifier (from headers, JWT token, etc).
         </p>
 
         <h2 className="text-2xl font-semibold text-blue-200 mb-2">
@@ -53,19 +53,21 @@ export default function SpringDBSwitchingBlog() {
         </h2>
         <ol className="list-decimal list-inside mb-6 text-blue-100">
           <li>
-            Create a `TenantContext` to hold the current tenant identifier.
+            Create a <code>TenantContext</code> to hold the current tenant
+            identifier.
           </li>
           <li>
             Use an interceptor or filter to extract the tenant ID from the
-            request and set it in `TenantContext`.
+            request and set it in <code>TenantContext</code>.
           </li>
           <li>
-            Configure a `RoutingDataSource` class extending
-            `AbstractRoutingDataSource` to switch based on the tenant.
+            Configure a <code>RoutingDataSource</code> class extending
+            <code> AbstractRoutingDataSource</code> to switch based on the
+            tenant.
           </li>
           <li>
-            Initialize a `Map String, DataSource` and load tenant DBs from
-            config or dynamically.
+            Initialize a <code>Map&lt;String, DataSource&gt;</code> and load
+            tenant DBs from config or dynamically.
           </li>
         </ol>
 

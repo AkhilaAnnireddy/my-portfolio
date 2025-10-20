@@ -42,139 +42,6 @@ export default function Hero() {
     }
   };
 
-  // const skills = [
-  //   {
-  //     name: "Programming Languages",
-  //     icon: (
-  //       <motion.div
-  //         animate={{ y: [0, -10, 0] }}
-  //         transition={{ repeat: Infinity, duration: 0.6 }}
-  //       >
-  //         <Braces className="h-8 w-8 text-blue-400" />
-  //       </motion.div>
-  //     ),
-  //     details: [
-  //       "Java",
-  //       "Python",
-  //       "JavaScript",
-  //       "C",
-  //       "C++",
-  //       "SQL",
-  //       "HTML",
-  //       "CSS",
-  //     ],
-  //   },
-  //   {
-  //     name: "Frontend Development",
-  //     icon: (
-  //       <motion.div
-  //         animate={{ y: [0, -10, 0] }}
-  //         transition={{ repeat: Infinity, duration: 0.6 }}
-  //       >
-  //         <Globe className="h-8 w-8 text-blue-400" />
-  //       </motion.div>
-  //     ),
-  //     details: ["ReactJS", "Jest", "NextJS"],
-  //   },
-  //   {
-  //     name: "Backend Development",
-  //     icon: (
-  //       <motion.div
-  //         animate={{ y: [0, -10, 0] }}
-  //         transition={{ repeat: Infinity, duration: 0.6 }}
-  //       >
-  //         <Server className="h-8 w-8 text-blue-400" />
-  //       </motion.div>
-  //     ),
-  //     details: [
-  //       "Spring Boot",
-  //       "Flask",
-  //       "Django",
-  //       "RESTful APIs",
-  //       "SCIM API",
-  //       "MyBatis",
-  //     ],
-  //   },
-  //   {
-  //     name: "Cloud & DevOps",
-  //     icon: (
-  //       <motion.div
-  //         animate={{ y: [0, -10, 0] }}
-  //         transition={{ repeat: Infinity, duration: 0.6 }}
-  //       >
-  //         <Cpu className="h-8 w-8 text-blue-400" />
-  //       </motion.div>
-  //     ),
-  //     details: ["AWS", "Terraform", "Docker", "Jenkins", "Git", "Linux"],
-  //   },
-  //   {
-  //     name: "Testing & QA",
-  //     icon: (
-  //       <motion.div
-  //         animate={{ y: [0, -10, 0] }}
-  //         transition={{ repeat: Infinity, duration: 0.6 }}
-  //       >
-  //         <Wrench className="h-8 w-8 text-blue-400" />
-  //       </motion.div>
-  //     ),
-  //     details: ["JUnit", "Mockito", "Selenium", "Cucumber"],
-  //   },
-  //   {
-  //     name: "Data Science & ML",
-  //     icon: (
-  //       <motion.div
-  //         animate={{ y: [0, -10, 0] }}
-  //         transition={{ repeat: Infinity, duration: 0.6 }}
-  //       >
-  //         <BrainCircuit className="h-8 w-8 text-blue-400" />
-  //       </motion.div>
-  //     ),
-  //     details: [
-  //       "Machine Learning",
-  //       "NumPy",
-  //       "Pandas",
-  //       "Scikit-learn",
-  //       "Matplotlib",
-  //       "Feature Engineering",
-  //     ],
-  //   },
-  //   {
-  //     name: "Monitoring & Logging",
-  //     icon: (
-  //       <motion.div
-  //         animate={{ y: [0, -10, 0] }}
-  //         transition={{ repeat: Infinity, duration: 0.6 }}
-  //       >
-  //         <Database className="h-8 w-8 text-blue-400" />
-  //       </motion.div>
-  //     ),
-  //     details: ["Splunk"],
-  //   },
-  //   {
-  //     name: "Project & Workflow Tools",
-  //     icon: (
-  //       <motion.div
-  //         animate={{ y: [0, -10, 0] }}
-  //         transition={{ repeat: Infinity, duration: 0.6 }}
-  //       >
-  //         <Code2 className="h-8 w-8 text-blue-400" />
-  //       </motion.div>
-  //     ),
-  //     details: ["Git", "Jira", "Bitbucket", "Confluence"],
-  //   },
-  //   {
-  //     name: "Software Development Concepts",
-  //     icon: (
-  //       <motion.div
-  //         animate={{ y: [0, -10, 0] }}
-  //         transition={{ repeat: Infinity, duration: 0.6 }}
-  //       >
-  //         <Lightbulb className="h-8 w-8 text-blue-400" />
-  //       </motion.div>
-  //     ),
-  //     details: ["OOP", "System Design", "SDLC", "Agile"],
-  //   },
-  // ];
   type HeroSkill = { label: string; proof: string; href?: string }; // href -> links to a case study
   type SkillItem = { label: string; usedIn?: string }; // “Used in” = proof tag
 
@@ -405,277 +272,23 @@ export default function Hero() {
 
           {/* Primary CTA */}
           <div className="mt-7">
-            <motion.button
-              onClick={scrollToAbout}
-              whileHover={reduceMotion ? {} : { scale: 1.03 }}
-              whileTap={reduceMotion ? {} : { scale: 0.97 }}
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-blue-700 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-shadow"
+            <Link
+              href="/workexp"
+              className="inline-block"
+              aria-label="Go to Work Experience"
             >
-              Learn More About Me
-              <ArrowRight className="h-4 w-4" aria-hidden="true" />
-            </motion.button>
+              <motion.span
+                whileHover={reduceMotion ? {} : { scale: 1.03 }}
+                whileTap={reduceMotion ? {} : { scale: 0.97 }}
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-blue-700 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-shadow"
+              >
+                Learn More About My Work
+                <ArrowRight className="h-4 w-4" aria-hidden="true" />
+              </motion.span>
+            </Link>
           </div>
         </motion.div>
       </motion.section>
-
-      {/* Work Experience */}
-      {/* <motion.section
-        ref={aboutRef}
-        className="py-20 px-8 bg-black text-blue-200"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-      >
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-16 text-blue-400">
-            Work Experience
-          </h2>
-          <div className="space-y-8 border-l-4 border-blue-700 pl-6">
-            Backend Developer - CU Boulder
-            <motion.div
-              whileHover={{ scale: 1.02 }}
-              className="relative pl-8 before:absolute before:left-0 before:top-0 before:bottom-0 before:w-px before:bg-blue-700"
-            >
-              <div className="absolute left-0 top-0 w-2 h-2 bg-blue-600 rounded-full transform -translate-x-1/2" />
-              <h3 className="text-xl font-semibold text-blue-200">
-                Software Developer
-              </h3>
-              <p className="text-blue-300 text-lg">
-                Institute of Cognitive Science – CU Boulder
-              </p>
-              <p className="text-blue-400 text-sm">Jan 2025 – Present</p>
-
-              <div className="mt-3 space-y-3">
-                <div>
-                  <h4 className="text-blue-400 font-medium">
-                    🔹 Role Alignment
-                  </h4>
-                  <p className="text-blue-300">
-                    Although titled <strong>Software Developer</strong>, my work
-                    aligns with Cloud Engineer, ML Engineer, Full-Stack
-                    Developer, and Data Engineer roles.
-                  </p>
-                </div>
-
-                <div>
-                  <h4 className="text-blue-400 font-medium">🔹 Impact</h4>
-                  <ul className="list-disc ml-6 text-blue-300 space-y-1">
-                    <li>
-                      Productionized PhD ML models into scalable systems for
-                      researchers & clients.
-                    </li>
-                    <li>
-                      Delivered session analytics (diarization, transcription,
-                      math-term detection, summaries).
-                    </li>
-                    <li>
-                      Reduced GPU inference costs by <strong>30%</strong> with
-                      AWS Batch optimization.
-                    </li>
-                  </ul>
-                </div>
-
-                <div>
-                  <h4 className="text-blue-400 font-medium">
-                    🔹 Technical Work
-                  </h4>
-                  <ul className="list-disc ml-6 text-blue-300 space-y-1">
-                    <li>
-                      Architected event-driven AWS pipelines (Lambda, SQS,
-                      Batch-GPU, Step Functions).
-                    </li>
-                    <li>
-                      Migrated frontend from React → <strong>Next.js</strong>{" "}
-                      with ISR, API Routes, and Edge Middleware.
-                    </li>
-                    <li>
-                      Implemented Cognito-based authentication with role-based
-                      access & monitoring.
-                    </li>
-                    <li>
-                      Defined all infra in <strong>Terraform modules</strong>{" "}
-                      with CI/CD via GitHub Actions.
-                    </li>
-                  </ul>
-                </div>
-
-                <div>
-                  <h4 className="text-blue-400 font-medium">🔹 Skills</h4>
-                  <p className="text-blue-300">
-                    Python, Next.js, Terraform, AWS (Lambda, SQS, Batch, Step
-                    Functions, Cognito, S3, DynamoDB), Docker, GitHub Actions,
-                    Event-driven Architectures
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-
-            Software Development Engineer - JP Morgan Chase
-            <motion.div
-              whileHover={{ scale: 1.02 }}
-              className="relative pl-8 before:absolute before:left-0 before:top-0 before:bottom-0 before:w-px before:bg-blue-700"
-            >
-              <div className="absolute left-0 top-0 w-2 h-2 bg-blue-600 rounded-full transform -translate-x-1/2" />
-              <h3 className="text-xl font-semibold text-blue-200">
-                Software Development Engineer
-              </h3>
-              <p className="text-blue-300 text-lg">JP Morgan Chase & Co.</p>
-              <p className="text-blue-400 text-sm">Feb 2022 – Aug 2024</p>
-
-              <div className="mt-3 space-y-3">
-                <div>
-                  <h4 className="text-blue-400 font-medium">
-                    🔹 Role Alignment
-                  </h4>
-                  <p className="text-blue-300">
-                    While titled <strong>Software Development Engineer</strong>,
-                    this role spanned
-                    <strong> Full-Stack Development</strong>,{" "}
-                    <strong>Cloud Infrastructure Engineering</strong>, and{" "}
-                    <strong>DevOps/SRE</strong> responsibilities.
-                  </p>
-                </div>
-
-                <div>
-                  <h4 className="text-blue-400 font-medium">🔹 Impact</h4>
-                  <ul className="list-disc ml-6 text-blue-300 space-y-1">
-                    <li>
-                      Shipped <strong>50+ full-stack features</strong> across
-                      corporate investment banking apps, driving real client
-                      adoption.
-                    </li>
-                    <li>
-                      Cut <strong>infrastructure costs by 30%</strong> and
-                      achieved <strong>99.9% availability</strong>
-                      through AWS migration & blue/green deployments.
-                    </li>
-                    <li>
-                      Improved compliance processes, reducing manual access
-                      reviews by <strong>65%</strong> with automated SCIM &
-                      entitlement-based controls.
-                    </li>
-                    <li>
-                      Boosted platform reliability, lowering MTTR by{" "}
-                      <strong>45%</strong> via observability and automated
-                      rollbacks.
-                    </li>
-                  </ul>
-                </div>
-
-                <div>
-                  <h4 className="text-blue-400 font-medium">
-                    🔹 Technical Work
-                  </h4>
-                  <ul className="list-disc ml-6 text-blue-300 space-y-1">
-                    <li>
-                      Delivered React frontends and Spring Boot microservices
-                      with full unit & integration test coverage.
-                    </li>
-                    <li>
-                      Orchestrated AWS migration (Terraform, Auto Scaling,
-                      blue/green deploys, health checks) for 4 core apps.
-                    </li>
-                    <li>
-                      Developed a{" "}
-                      <strong>SCIM 2.0-compliant REST service</strong> with
-                      Spring Boot, JWT auth, and audit logging.
-                    </li>
-                    <li>
-                      Built entitlement-driven access control with corporate SSO
-                      & token re-validation for security hardening.
-                    </li>
-                    <li>
-                      Automated releases via Jenkins & Spinnaker pipelines with
-                      monitoring dashboards (Prometheus/Grafana).
-                    </li>
-                    <li>
-                      Upgraded Java platform (8 → 11 → 17), modernizing APIs and
-                      validating performance via regression tests.
-                    </li>
-                  </ul>
-                </div>
-
-                <div>
-                  <h4 className="text-blue-400 font-medium">🔹 Skills</h4>
-                  <p className="text-blue-300">
-                    Java, Spring Boot, React, AWS (EC2, ASG, IAM), Terraform,
-                    Jenkins, Spinnaker, Prometheus/Grafana, SCIM 2.0, JWT,
-                    CI/CD, Agile Delivery
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-            Summer Intern - JP Morgan Chase
-            <motion.div
-              whileHover={{ scale: 1.02 }}
-              className="relative pl-8 before:absolute before:left-0 before:top-0 before:bottom-0 before:w-px before:bg-blue-700"
-            >
-              <div className="absolute left-0 top-0 w-2 h-2 bg-blue-600 rounded-full transform -translate-x-1/2" />
-              <h3 className="text-xl font-semibold text-blue-200">
-                Summer Intern
-              </h3>
-              <p className="text-blue-300 text-lg">JP Morgan Chase & Co.</p>
-              <p className="text-blue-400 text-sm">May 2021 – July 2021</p>
-
-              <div className="mt-3 space-y-3">
-                <div>
-                  <h4 className="text-blue-400 font-medium">
-                    🔹 Role Alignment
-                  </h4>
-                  <p className="text-blue-300">
-                    Though titled <strong>Summer Intern</strong>, the work
-                    aligned with
-                    <strong> Backend Development</strong> and{" "}
-                    <strong>DevOps/Test Automation</strong>.
-                  </p>
-                </div>
-
-                <div>
-                  <h4 className="text-blue-400 font-medium">🔹 Impact</h4>
-                  <ul className="list-disc ml-6 text-blue-300 space-y-1">
-                    <li>
-                      Reduced manual monitoring by introducing automated anomaly
-                      alerts on deal workflows.
-                    </li>
-                    <li>
-                      Improved CI reliability and developer feedback loops by
-                      automating end-to-end tests.
-                    </li>
-                  </ul>
-                </div>
-
-                <div>
-                  <h4 className="text-blue-400 font-medium">
-                    🔹 Technical Work
-                  </h4>
-                  <ul className="list-disc ml-6 text-blue-300 space-y-1">
-                    <li>
-                      Built an <strong>AutoMonitor</strong> scheduler with{" "}
-                      <strong>Akka</strong> to track deal status events and
-                      trigger notifications on anomalies.
-                    </li>
-                    <li>
-                      Created a <strong>Jenkins</strong> pipeline to run
-                      non-snapshot <strong>UI/API/Selenium</strong> tests and
-                      integrated it with <strong>Bitbucket</strong> for seamless
-                      CI/CD.
-                    </li>
-                  </ul>
-                </div>
-
-                <div>
-                  <h4 className="text-blue-400 font-medium">🔹 Skills</h4>
-                  <p className="text-blue-300">
-                    Akka (JVM), Jenkins, Bitbucket, Selenium, CI/CD, Test
-                    Automation
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </motion.section> */}
-      {/* Work Experience (Simplified Timeline with Durations) */}
       <motion.section
         ref={aboutRef}
         className="py-20 px-8 bg-black text-blue-200"
@@ -798,7 +411,7 @@ export default function Hero() {
           {/* CTA */}
           <div className="mt-12 text-center">
             <a
-              href="/work"
+              href="/workexp"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block px-6 py-2 text-blue-100 bg-blue-700 rounded-lg hover:bg-blue-600 transition"
@@ -810,140 +423,149 @@ export default function Hero() {
       </motion.section>
 
       {/* Skills Section */}
-      {/* <motion.section
-        className="py-20 px-8 bg-black text-blue-200"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-      >
+      <section className="py-20 px-8 bg-black text-blue-200">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-16 text-blue-400">
+          <h2 className="text-4xl font-bold text-center text-blue-400 mb-12">
             Skills
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {skills.map((skill, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ y: 16, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                viewport={{ once: true, amount: 0.2 }}
-                transition={{ duration: 0.4, delay: idx * 0.06 }}
-                whileHover={{ y: -4 }}
-                className="rounded-2xl p-6 bg-gray-950/90 border border-blue-900/40 shadow-lg hover:shadow-blue-900/40 transition-all"
-              >
-        
-                <div className="flex items-center gap-3">
-                  <div className="text-blue-300">{skill.icon}</div>
-                  <h3 className="text-xl font-semibold text-blue-200">
-                    {skill.name}
-                  </h3>
-                </div>
-
-    
-                <div className="mt-5 flex flex-wrap gap-2">
-                  {skill.details.map((d: string) => (
-                    <span
-                      key={d}
-                      className="inline-flex items-center rounded-full px-3 py-1 text-sm
-                         bg-blue-950/60 text-blue-300 border border-blue-800/60
-                         hover:bg-blue-900/60 hover:border-blue-700/60 transition-colors"
-                    >
-                      {d}
-                    </span>
-                  ))}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </motion.section> */}
-
-      <motion.section
-        className="py-20 px-8 bg-black text-blue-200"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-      >
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center text-blue-400">
-            Skills
-          </h2>
-
-          {/* Brand/Tagline */}
-          <p className="text-center text-blue-300 max-w-2xl mx-auto mt-4 mb-10 text-lg">
-            Core strengths in <strong>Cloud Infrastructure</strong>,{" "}
-            <strong>Full-Stack Development</strong>, and{" "}
-            <strong>ML-powered Analytics</strong>.
-          </p>
-
-          {/* HERO skills with proof (top row for the F-pattern) */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
-            {HERO_SKILLS.map((s, i) => (
-              <motion.div
-                key={s.label}
-                initial={{ y: 12, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                viewport={{ once: true, amount: 0.2 }}
-                transition={{ duration: 0.35, delay: i * 0.05 }}
-                className="rounded-xl p-4 bg-gray-950/90 border border-blue-900/50 shadow hover:shadow-blue-900/40 transition group"
-              >
-                <div className="flex items-center justify-between">
-                  <div className="text-base font-semibold text-blue-100">
-                    {s.label}
+          {/* Two-column grid */}
+          <div className="grid md:grid-cols-2 gap-40">
+            {/* Left Column */}
+            <div className="space-y-10">
+              {/* Cloud & DevOps */}
+              <div>
+                <h3 className="text-xl font-semibold text-blue-300 mb-4">
+                  ☁️ Cloud & DevOps
+                </h3>
+                {[
+                  { label: "AWS", level: 90 },
+                  { label: "Terraform", level: 80 },
+                  { label: "CI/CD (GitHub Actions, Docker)", level: 85 },
+                ].map((skill) => (
+                  <div key={skill.label} className="mb-4">
+                    <div className="flex justify-between text-sm mb-1">
+                      <span>{skill.label}</span>
+                      <span>{skill.level}%</span>
+                    </div>
+                    <div className="w-full bg-blue-950/50 rounded-full h-2">
+                      <div
+                        className="h-2 bg-gradient-to-r from-blue-500 to-blue-300 rounded-full"
+                        style={{ width: `${skill.level}%` }}
+                      ></div>
+                    </div>
                   </div>
-                  {s.href ? (
-                    <Link
-                      href={s.href}
-                      className="opacity-70 group-hover:opacity-100 text-blue-300"
-                    >
-                      <ArrowUpRight className="h-4 w-4" />
-                    </Link>
-                  ) : null}
-                </div>
-                <div className="mt-1 text-sm text-blue-300/90">{s.proof}</div>
-              </motion.div>
-            ))}
-          </div>
+                ))}
+              </div>
 
-          {/* Grouped skills with “used in” evidence tags (ATS-friendly keywords in context) */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {GROUPS.map((g, idx) => (
-              <motion.div
-                key={g.name}
-                initial={{ y: 16, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                viewport={{ once: true, amount: 0.2 }}
-                transition={{ duration: 0.4, delay: idx * 0.06 }}
-                className="rounded-2xl p-6 bg-gray-950/90 border border-blue-900/40 shadow-lg hover:shadow-blue-900/40 transition-all"
-              >
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="text-blue-300">{g.icon}</div>
-                  <h3 className="text-xl font-semibold text-blue-200">
-                    {g.name}
-                  </h3>
-                </div>
+              {/* Backend */}
+              <div>
+                <h3 className="text-xl font-semibold text-blue-300 mb-4">
+                  💻 Backend Development
+                </h3>
+                {[
+                  { label: "Java & Spring Boot", level: 90 },
+                  { label: "Node.js & Express", level: 75 },
+                  { label: "REST APIs & Microservices", level: 85 },
+                  { label: "PostgreSQL / DynamoDB", level: 80 },
+                ].map((skill) => (
+                  <div key={skill.label} className="mb-4">
+                    <div className="flex justify-between text-sm mb-1">
+                      <span>{skill.label}</span>
+                      <span>{skill.level}%</span>
+                    </div>
+                    <div className="w-full bg-blue-950/50 rounded-full h-2">
+                      <div
+                        className="h-2 bg-gradient-to-r from-blue-500 to-blue-300 rounded-full"
+                        style={{ width: `${skill.level}%` }}
+                      ></div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
 
-                <ul className="space-y-3">
-                  {g.items.map(({ label, usedIn }) => (
-                    <li key={label} className="text-sm">
-                      <div className="flex flex-wrap items-center gap-2">
-                        <span className="text-blue-200/90">{label}</span>
-                        {usedIn && (
-                          <span className="text-[11px] px-2 py-0.5 rounded-full bg-blue-900/40 border border-blue-800/60 text-blue-300">
-                            Used in: {usedIn}
-                          </span>
-                        )}
-                      </div>
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-            ))}
+            {/* Right Column */}
+            <div className="space-y-10">
+              {/* Machine Learning */}
+              <div>
+                <h3 className="text-xl font-semibold text-blue-300 mb-4">
+                  🤖 Machine Learning & Data
+                </h3>
+                {[
+                  { label: "Python", level: 90 },
+                  { label: "SageMaker", level: 80 },
+                  { label: "Scikit-learn / TensorFlow", level: 75 },
+                  { label: "Data Pipelines", level: 85 },
+                ].map((skill) => (
+                  <div key={skill.label} className="mb-4">
+                    <div className="flex justify-between text-sm mb-1">
+                      <span>{skill.label}</span>
+                      <span>{skill.level}%</span>
+                    </div>
+                    <div className="w-full bg-blue-950/50 rounded-full h-2">
+                      <div
+                        className="h-2 bg-gradient-to-r from-blue-500 to-blue-300 rounded-full"
+                        style={{ width: `${skill.level}%` }}
+                      ></div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Frontend */}
+              <div>
+                <h3 className="text-xl font-semibold text-blue-300 mb-4">
+                  🎨 Frontend Development
+                </h3>
+                {[
+                  { label: "React & TypeScript", level: 85 },
+                  { label: "Tailwind CSS / UI Design", level: 80 },
+                  { label: "JavaScript / HTML / CSS", level: 90 },
+                ].map((skill) => (
+                  <div key={skill.label} className="mb-4">
+                    <div className="flex justify-between text-sm mb-1">
+                      <span>{skill.label}</span>
+                      <span>{skill.level}%</span>
+                    </div>
+                    <div className="w-full bg-blue-950/50 rounded-full h-2">
+                      <div
+                        className="h-2 bg-gradient-to-r from-blue-500 to-blue-300 rounded-full"
+                        style={{ width: `${skill.level}%` }}
+                      ></div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Tools */}
+              <div>
+                <h3 className="text-xl font-semibold text-blue-300 mb-4">
+                  🧰 Tools & Practices
+                </h3>
+                {[
+                  { label: "Git / GitHub", level: 90 },
+                  { label: "VS Code / Linux", level: 85 },
+                  { label: "Agile / Jira / Confluence", level: 80 },
+                ].map((skill) => (
+                  <div key={skill.label} className="mb-4">
+                    <div className="flex justify-between text-sm mb-1">
+                      <span>{skill.label}</span>
+                      <span>{skill.level}%</span>
+                    </div>
+                    <div className="w-full bg-blue-950/50 rounded-full h-2">
+                      <div
+                        className="h-2 bg-gradient-to-r from-blue-500 to-blue-300 rounded-full"
+                        style={{ width: `${skill.level}%` }}
+                      ></div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
-      </motion.section>
-
+      </section>
       {/* Certifications Section */}
       <motion.section
         className="py-20 px-6 bg-black text-blue-200"
@@ -1020,6 +642,58 @@ export default function Hero() {
               </li>
             ))}
           </ul>
+        </div>
+      </motion.section>
+      {/* Volunteer Experience */}
+      <motion.section
+        className="py-20 px-8 bg-black text-blue-200"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-16 text-blue-400">
+            Volunteer Experience
+          </h2>
+
+          <motion.div
+            whileHover={{ scale: 1.02 }}
+            className="relative pl-8 border-l-4 border-blue-700"
+          >
+            <div className="absolute left-5 top-2 w-3 h-3 bg-blue-600 rounded-full transform -translate-x-1/2" />
+            <h3 className="text-xl font-semibold text-blue-200">
+              Web Developer – Force for Good, JP Morgan
+            </h3>
+            <p className="text-blue-300 text-lg">
+              Prem Samriddhi Foundation (Farmer-led NGO)
+            </p>
+            <p className="text-blue-400 text-sm">2021</p>
+            <ul className="list-disc text-blue-300 text-base leading-relaxed ml-6 mt-2 space-y-1">
+              <li>
+                Partnered with <strong>Force for Good</strong> initiative to
+                design and launch a multilingual, low-cost website for Prem
+                Samriddhi Foundation, an NGO run by farmers promoting organic
+                and endangered crops.
+              </li>
+              <li>
+                Enabled farmers to showcase products, share cultivation
+                knowledge through a blog, and engage with customers via email
+                subscriptions.
+              </li>
+              <li>
+                Delivered training sessions and comprehensive documentation so
+                the NGO team could self-manage updates and content long-term.
+              </li>
+            </ul>
+            <a
+              href="https://www.premsamriddhifoundation.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-block text-blue-400 hover:text-blue-300 text-sm underline"
+            >
+              View Website →
+            </a>
+          </motion.div>
         </div>
       </motion.section>
 
