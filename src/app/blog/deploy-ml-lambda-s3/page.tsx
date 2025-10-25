@@ -74,7 +74,7 @@ export default function DeployMLLambdaS3Article() {
         {/* Section: Packaging */}
         <section className="mb-12">
           <h2 className="text-2xl font-semibold text-blue-300 mb-3">
-            📦 Packaging Models for Lambda
+            Packaging Models for Lambda
           </h2>
           <p className="text-blue-100 mb-3 leading-relaxed">
             Since Lambda has resource limits (memory, package size, execution
@@ -97,7 +97,7 @@ export default function DeployMLLambdaS3Article() {
         {/* Section: Sample Code */}
         <section className="mb-12">
           <h2 className="text-2xl font-semibold text-blue-300 mb-3">
-            🔑 Sample Inference Code (Python)
+            Sample Inference Code (Python)
           </h2>
           <pre className="bg-gray-900 text-blue-100 p-5 rounded-xl text-sm overflow-x-auto border border-blue-900/50 shadow-lg">
             {`import boto3
@@ -144,7 +144,7 @@ def lambda_handler(event, context):
         {/* Section: Security */}
         <section className="mb-12">
           <h2 className="text-2xl font-semibold text-blue-300 mb-3">
-            🔐 Security Considerations
+            Security Considerations
           </h2>
           <ul className="list-disc list-inside text-blue-100 space-y-2 leading-relaxed">
             <li>
@@ -164,7 +164,7 @@ def lambda_handler(event, context):
         {/* Section: Use Case */}
         <section className="mb-12">
           <h2 className="text-2xl font-semibold text-blue-300 mb-3">
-            💡 Real-World Use Case
+            Real-World Use Case
           </h2>
           <p className="text-blue-100 leading-relaxed">
             In one of my projects, I built a serverless inference pipeline for
@@ -178,7 +178,7 @@ def lambda_handler(event, context):
         {/* Section: Conclusion */}
         <section>
           <h2 className="text-2xl font-semibold text-blue-300 mb-4">
-            📌 Conclusion
+            Conclusion
           </h2>
           <p className="text-blue-100 leading-relaxed">
             Deploying ML models with AWS Lambda and S3 provides a
