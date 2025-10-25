@@ -8,7 +8,7 @@ export default function SCIMArticle() {
       <div className="max-w-5xl mx-auto">
         {/* Title */}
         <h1 className="text-4xl font-bold text-blue-400 mb-3 text-center">
-          A Developer’s Guide to SCIM API for User Provisioning
+          A Developer&apos;s Guide to SCIM API for User Provisioning
         </h1>
         <p className="text-blue-400 text-sm text-center mb-12">
           April 15, 2025 • Akhila Annireddy
@@ -32,7 +32,7 @@ export default function SCIMArticle() {
         {/* What is SCIM */}
         <section className="mb-12">
           <h2 className="text-2xl font-semibold text-blue-300 mb-3">
-            🔧 What is SCIM?
+            What is SCIM?
           </h2>
           <p className="text-blue-100 leading-relaxed">
             SCIM allows systems to exchange user identity data via a RESTful API
@@ -45,20 +45,20 @@ export default function SCIMArticle() {
         {/* Why Use SCIM */}
         <section className="mb-12">
           <h2 className="text-2xl font-semibold text-blue-300 mb-3">
-            🚀 Why Use SCIM?
+            Why Use SCIM?
           </h2>
           <ul className="list-disc list-inside text-blue-100 space-y-2 leading-relaxed">
-            <li>✔️ Automates user provisioning and deprovisioning.</li>
-            <li>✔️ Maintains consistent user identities across platforms.</li>
-            <li>✔️ Reduces manual work for IT administrators.</li>
-            <li>✔️ Supports secure and scalable identity management.</li>
+            <li>Automates user provisioning and deprovisioning.</li>
+            <li>Maintains consistent user identities across platforms.</li>
+            <li>Reduces manual work for IT administrators.</li>
+            <li>Supports secure and scalable identity management.</li>
           </ul>
         </section>
 
         {/* SCIM 2.0 Overview */}
         <section className="mb-12">
           <h2 className="text-2xl font-semibold text-blue-300 mb-3">
-            📘 SCIM 2.0 Overview
+            SCIM 2.0 Overview
           </h2>
           <p className="text-blue-100 mb-3 leading-relaxed">
             SCIM 2.0 is the latest version of the protocol, defined in RFC 7643
@@ -88,7 +88,7 @@ export default function SCIMArticle() {
         {/* SCIM User Resource Example */}
         <section className="mb-12">
           <h2 className="text-2xl font-semibold text-blue-300 mb-3">
-            🧱 SCIM User Resource Example
+            SCIM User Resource Example
           </h2>
           <pre className="bg-gray-900 text-blue-100 p-5 rounded-xl text-sm overflow-x-auto border border-blue-900/50 shadow-lg">
 {`{
@@ -112,7 +112,7 @@ export default function SCIMArticle() {
         {/* Authentication */}
         <section className="mb-12">
           <h2 className="text-2xl font-semibold text-blue-300 mb-3">
-            🔐 Authentication
+            Authentication
           </h2>
           <p className="text-blue-100 mb-3 leading-relaxed">
             SCIM APIs are typically secured using OAuth 2.0 bearer tokens. You
@@ -127,7 +127,7 @@ export default function SCIMArticle() {
         {/* Real-World Use Case */}
         <section className="mb-12">
           <h2 className="text-2xl font-semibold text-blue-300 mb-3">
-            💡 Use Case in the Real World
+            Use Case in the Real World
           </h2>
           <p className="text-blue-100 leading-relaxed">
             In one of my projects at JP Morgan, I implemented SCIM 2.0 APIs to
@@ -140,7 +140,7 @@ export default function SCIMArticle() {
         {/* Tools */}
         <section className="mb-12">
           <h2 className="text-2xl font-semibold text-blue-300 mb-3">
-            📦 Tools & Libraries
+            Tools &amp; Libraries
           </h2>
           <ul className="list-disc list-inside text-blue-100 space-y-2 leading-relaxed">
             <li>
@@ -160,11 +160,11 @@ export default function SCIMArticle() {
         {/* Conclusion */}
         <section>
           <h2 className="text-2xl font-semibold text-blue-300 mb-4">
-            📌 Conclusion
+            Conclusion
           </h2>
           <p className="text-blue-100 leading-relaxed">
             SCIM streamlines identity management in modern applications. If
-            you're building SaaS products or managing users across systems,
+            you&apos;re building SaaS products or managing users across systems,
             SCIM 2.0 is a must-know protocol. With a bit of setup, it can save
             hours of manual provisioning and ensure secure, scalable identity
             automation.

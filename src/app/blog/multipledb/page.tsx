@@ -24,14 +24,14 @@ export default function SpringDBSwitchingBlog() {
           As modern applications scale, supporting multiple clients (tenants)
           with isolated data becomes crucial. One efficient strategy is dynamic
           or runtime database switching in Spring Boot—where a single UI serves
-          multiple tenants, but each tenant's data resides in a separate
+          multiple tenants, but each tenant&apos;s data resides in a separate
           database.
         </motion.p>
 
         {/* Multi-Tenancy */}
         <section className="mb-12">
           <h2 className="text-2xl font-semibold text-blue-300 mb-3">
-            🔄 What is Multi-Tenancy?
+            What is Multi-Tenancy?
           </h2>
           <p className="text-blue-100 leading-relaxed">
             Multi-tenancy is an architectural pattern where a single application
@@ -44,7 +44,7 @@ export default function SpringDBSwitchingBlog() {
         {/* Approaches */}
         <section className="mb-12">
           <h2 className="text-2xl font-semibold text-blue-300 mb-3">
-            🧠 Common Approaches
+            Common Approaches
           </h2>
           <ul className="list-disc list-inside text-blue-100 space-y-2 leading-relaxed">
             <li>Single Database, Shared Schema (with tenant column)</li>
@@ -60,7 +60,7 @@ export default function SpringDBSwitchingBlog() {
         {/* Runtime Switching */}
         <section className="mb-12">
           <h2 className="text-2xl font-semibold text-blue-300 mb-3">
-            ⚙️ How Runtime Switching Works
+            How Runtime Switching Works
           </h2>
           <p className="text-blue-100 leading-relaxed">
             In a multi-database setup, each tenant is associated with a
@@ -73,7 +73,7 @@ export default function SpringDBSwitchingBlog() {
         {/* Implementation Steps */}
         <section className="mb-12">
           <h2 className="text-2xl font-semibold text-blue-300 mb-3">
-            🏗️ Implementation Steps
+            Implementation Steps
           </h2>
           <ol className="list-decimal list-inside text-blue-100 space-y-2 leading-relaxed">
             <li>
@@ -114,7 +114,7 @@ export default function SpringDBSwitchingBlog() {
         {/* Real-World Use Case */}
         <section className="mb-12">
           <h2 className="text-2xl font-semibold text-blue-300 mb-3">
-            🚀 Real-World Use Case
+            Real-World Use Case
           </h2>
           <p className="text-blue-100 leading-relaxed">
             At JP Morgan, I implemented dynamic tenant routing to support
@@ -127,13 +127,13 @@ export default function SpringDBSwitchingBlog() {
         {/* Conclusion */}
         <section>
           <h2 className="text-2xl font-semibold text-blue-300 mb-4">
-            📌 Conclusion
+            Conclusion
           </h2>
           <p className="text-blue-100 leading-relaxed">
             Runtime database switching empowers SaaS applications to scale
             efficiently while maintaining full tenant data isolation. With
-            Spring Boot’s flexibility, it’s easier than ever to architect robust
-            multi-tenant systems.
+            Spring Boot&apos;s flexibility, it&apos;s easier than ever to
+            architect robust multi-tenant systems.
           </p>
         </section>
       </div>

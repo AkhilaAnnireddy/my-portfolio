@@ -21,6 +21,7 @@ import {
 
 export default function About() {
   const contactRef = useRef(null);
+
   return (
     <div className="min-h-screen bg-black overflow-y-auto scrollbar-blue">
       {/* About Me Section */}
@@ -36,7 +37,7 @@ export default function About() {
           className="text-5xl font-bold text-blue-400"
         >
           Beyond the Code: <br />
-          Passion, Creativity & Little Joys
+          Passion, Creativity &amp; Little Joys
         </motion.h1>
 
         <motion.p
@@ -45,9 +46,10 @@ export default function About() {
           transition={{ delay: 1 }}
           className="mt-4 text-lg text-blue-200 max-w-3xl"
         >
-          Life is more than just coding—it's about the simple joys. Whether it's
-          sipping coffee, dancing, watching stars, or taking long walks, I find
-          happiness in the little moments that make life beautiful.
+          Life is more than just coding&mdash;it&apos;s about the simple joys.
+          Whether it&apos;s sipping coffee, dancing, watching stars, or taking
+          long walks, I find happiness in the little moments that make life
+          beautiful.
           <br />
           <br />
           Let me share everything that makes my heart happy! 💙
@@ -113,7 +115,7 @@ export default function About() {
                   <Footprints className="w-12 h-12 text-blue-500 mx-auto mb-4" />
                 ),
                 title: "Nature Walks 🚶‍♀️",
-                text: "Exploring Boulder’s beauty on foot.",
+                text: "Exploring Boulder&apos;s beauty on foot.",
               },
               {
                 icon: (
@@ -162,7 +164,7 @@ export default function About() {
       >
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-4xl font-bold mb-16 text-blue-400">
-            Let's Connect
+            Let&apos;s Connect
           </h2>
           <div className="flex justify-center gap-8">
             <motion.a
@@ -191,10 +193,12 @@ export default function About() {
               <Mail className="h-8 w-8" />
             </motion.a>
           </div>
+
           <div className="max-w-4xl mx-auto text-center mt-8">
             <blockquote className="text-xl font-light italic text-blue-300">
               <footer className="text-lg text-blue-400 mt-4">
-                "In a world full of choices, I'm grateful you chose to stop by."
+                &quot;In a world full of choices, I&apos;m grateful you chose to
+                stop by.&quot;
               </footer>
             </blockquote>
           </div>

@@ -31,13 +31,6 @@ export default function Hero() {
   const copyInitial = reduceMotion
     ? { opacity: 1, y: 0 }
     : { opacity: 0, y: 24 };
-
-  const roleChips = [
-    "Full-Stack Developer",
-    "Cloud / AWS",
-    "ML Platforms (NLP • diarization)",
-  ];
-
   const openToRoles = [
     "Software Engineer (Backend)",
     "Full-Stack Engineer",
