@@ -26,7 +26,7 @@ import { DiJava } from "react-icons/di";
 
 type Skill = {
   name: string;
-  icon?: JSX.Element;
+  icon?: React.ReactNode;
 };
 
 type Category = {
