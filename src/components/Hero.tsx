@@ -7,173 +7,19 @@ import profilephoto from "../public/profile_pic.png";
 import da from "../public/da.png";
 import cp from "../public/cp.png";
 import ml from "../public/ml.png";
+import Skills from "./Skills";
 import Link from "next/link";
 import {
-  Globe,
-  Server,
-  Database,
-  Cpu,
   Code2,
-  BrainCircuit,
-  Braces,
-  Wrench,
-  Lightbulb,
   HeartHandshake,
   Brain,
-  Users,
-  Rocket,
-  Code,
-  Calendar,
-  Briefcase,
   Cloud,
-  Boxes,
-  GitBranch,
-  ShieldCheck,
-  ArrowUpRight,
   ArrowRight,
   BadgeCheck,
 } from "lucide-react";
+import { FaLinkedin } from "react-icons/fa";
 export default function Hero() {
   const aboutRef = useRef<HTMLDivElement | null>(null);
-
-  const scrollToAbout = () => {
-    if (aboutRef.current) {
-      aboutRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
-  type HeroSkill = { label: string; proof: string; href?: string }; // href -> links to a case study
-  type SkillItem = { label: string; usedIn?: string }; // “Used in” = proof tag
-
-  const HERO_SKILLS: HeroSkill[] = [
-    {
-      label: "AWS",
-      proof: "Cut GPU inference cost ~30% (Batch • SQS)",
-      href: "/work/cognitive-science",
-    },
-    {
-      label: "Next.js",
-      proof: "App Router • ISR • RSC (migrated from SPA)",
-      href: "/work/cognitive-science",
-    },
-    {
-      label: "Python",
-      proof: "Pipelines & services powering analytics",
-      href: "/work/cognitive-science",
-    },
-    {
-      label: "Terraform",
-      proof: "Modular IaC across prod/dev with CI/CD",
-      href: "/work/jpmc-sde",
-    },
-    {
-      label: "React",
-      proof: "50+ features shipped (enterprise apps)",
-      href: "/work/jpmc-sde",
-    },
-    {
-      label: "Spring Boot",
-      proof: "SCIM 2.0 • JWT • audit logging",
-      href: "/work/jpmc-sde",
-    },
-  ];
-
-  const GROUPS: {
-    name: string;
-    icon: React.ReactNode;
-    items: SkillItem[];
-  }[] = [
-    {
-      name: "Cloud & Infrastructure",
-      icon: <Cloud className="h-5 w-5 text-blue-400" />,
-      items: [
-        {
-          label: "AWS (Lambda, SQS, Batch, Cognito, S3, DynamoDB)",
-          usedIn: "CU Boulder platform",
-        },
-        {
-          label: "Terraform (modules, env separation)",
-          usedIn: "JPMC + CU Boulder",
-        },
-        {
-          label: "CI/CD (GitHub Actions, Jenkins)",
-          usedIn: "JPMC releases • research pipelines",
-        },
-        { label: "Docker • Linux • CloudWatch", usedIn: "All projects" },
-      ],
-    },
-    {
-      name: "Backend Development",
-      icon: <Server className="h-5 w-5 text-blue-400" />,
-      items: [
-        {
-          label: "Python (FastAPI/Flask)",
-          usedIn: "CU Boulder analytics services",
-        },
-        { label: "Java • Spring Boot", usedIn: "JPMC investor portal" },
-        { label: "REST APIs • SCIM 2.0", usedIn: "JPMC access governance" },
-        { label: "SQL (query optimization)", usedIn: "JPMC performance fixes" },
-      ],
-    },
-    {
-      name: "Frontend Development",
-      icon: <Globe className="h-5 w-5 text-blue-400" />,
-      items: [
-        { label: "Next.js (App Router • ISR)", usedIn: "CU Boulder dashboard" },
-        { label: "React • TypeScript • Tailwind", usedIn: "JPMC + CU Boulder" },
-        { label: "Jest (unit tests)", usedIn: "JPMC quality" },
-      ],
-    },
-    {
-      name: "Data & ML",
-      icon: <BrainCircuit className="h-5 w-5 text-blue-400" />,
-      items: [
-        {
-          label: "NLP • diarization • transcription",
-          usedIn: "Student–tutor analytics",
-        },
-        {
-          label: "Pandas • NumPy • scikit-learn",
-          usedIn: "Data processing pipelines",
-        },
-        {
-          label: "Feature engineering • analytics",
-          usedIn: "Session insights",
-        },
-      ],
-    },
-    {
-      name: "Quality & Practices",
-      icon: <Wrench className="h-5 w-5 text-blue-400" />,
-      items: [
-        {
-          label: "Testing (JUnit • Mockito • Selenium)",
-          usedIn: "JPMC release confidence",
-        },
-        {
-          label: "Agile/Scrum • release mgmt",
-          usedIn: "JPMC cross-team delivery",
-        },
-        { label: "Security • RBAC • audit logging", usedIn: "JPMC compliance" },
-        {
-          label: "Maker–Checker • DLQ/retries",
-          usedIn: "JPMC • AWS pipelines",
-        },
-      ],
-    },
-    {
-      name: "Tooling & Workflow",
-      icon: <Code2 className="h-5 w-5 text-blue-400" />,
-      items: [
-        { label: "Git • Bitbucket • Jira • Confluence", usedIn: "All teams" },
-        {
-          label: "Splunk / CloudWatch logging",
-          usedIn: "Prod troubleshooting",
-        },
-        { label: "System design • SDLC", usedIn: "Architecture decisions" },
-      ],
-    },
-  ];
   const reduceMotion = useReducedMotion();
   const hoverScale = reduceMotion ? {} : { scale: 1.03 };
   const appear = reduceMotion ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 };
@@ -291,7 +137,7 @@ export default function Hero() {
       </motion.section>
       <motion.section
         ref={aboutRef}
-        className="py-20 px-8 bg-black text-blue-200"
+        className="py-10 px-8 bg-black text-blue-200"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
@@ -410,165 +256,26 @@ export default function Hero() {
 
           {/* CTA */}
           <div className="mt-12 text-center">
-            <a
+            <Link
               href="/workexp"
-              target="_blank"
-              rel="noopener noreferrer"
               className="inline-block px-6 py-2 text-blue-100 bg-blue-700 rounded-lg hover:bg-blue-600 transition"
             >
               Know more about my work →
-            </a>
+            </Link>
           </div>
         </div>
       </motion.section>
 
       {/* Skills Section */}
-      <section className="py-20 px-8 bg-black text-blue-200">
+      <section className="bg-black text-blue-100 py-10 px-8">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center text-blue-400 mb-12">
-            Skills
-          </h2>
-
-          {/* Two-column grid */}
-          <div className="grid md:grid-cols-2 gap-40">
-            {/* Left Column */}
-            <div className="space-y-10">
-              {/* Cloud & DevOps */}
-              <div>
-                <h3 className="text-xl font-semibold text-blue-300 mb-4">
-                  ☁️ Cloud & DevOps
-                </h3>
-                {[
-                  { label: "AWS", level: 90 },
-                  { label: "Terraform", level: 80 },
-                  { label: "CI/CD (GitHub Actions, Docker)", level: 85 },
-                ].map((skill) => (
-                  <div key={skill.label} className="mb-4">
-                    <div className="flex justify-between text-sm mb-1">
-                      <span>{skill.label}</span>
-                      <span>{skill.level}%</span>
-                    </div>
-                    <div className="w-full bg-blue-950/50 rounded-full h-2">
-                      <div
-                        className="h-2 bg-gradient-to-r from-blue-500 to-blue-300 rounded-full"
-                        style={{ width: `${skill.level}%` }}
-                      ></div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              {/* Backend */}
-              <div>
-                <h3 className="text-xl font-semibold text-blue-300 mb-4">
-                  💻 Backend Development
-                </h3>
-                {[
-                  { label: "Java & Spring Boot", level: 90 },
-                  { label: "Node.js & Express", level: 75 },
-                  { label: "REST APIs & Microservices", level: 85 },
-                  { label: "PostgreSQL / DynamoDB", level: 80 },
-                ].map((skill) => (
-                  <div key={skill.label} className="mb-4">
-                    <div className="flex justify-between text-sm mb-1">
-                      <span>{skill.label}</span>
-                      <span>{skill.level}%</span>
-                    </div>
-                    <div className="w-full bg-blue-950/50 rounded-full h-2">
-                      <div
-                        className="h-2 bg-gradient-to-r from-blue-500 to-blue-300 rounded-full"
-                        style={{ width: `${skill.level}%` }}
-                      ></div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Right Column */}
-            <div className="space-y-10">
-              {/* Machine Learning */}
-              <div>
-                <h3 className="text-xl font-semibold text-blue-300 mb-4">
-                  🤖 Machine Learning & Data
-                </h3>
-                {[
-                  { label: "Python", level: 90 },
-                  { label: "SageMaker", level: 80 },
-                  { label: "Scikit-learn / TensorFlow", level: 75 },
-                  { label: "Data Pipelines", level: 85 },
-                ].map((skill) => (
-                  <div key={skill.label} className="mb-4">
-                    <div className="flex justify-between text-sm mb-1">
-                      <span>{skill.label}</span>
-                      <span>{skill.level}%</span>
-                    </div>
-                    <div className="w-full bg-blue-950/50 rounded-full h-2">
-                      <div
-                        className="h-2 bg-gradient-to-r from-blue-500 to-blue-300 rounded-full"
-                        style={{ width: `${skill.level}%` }}
-                      ></div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              {/* Frontend */}
-              <div>
-                <h3 className="text-xl font-semibold text-blue-300 mb-4">
-                  🎨 Frontend Development
-                </h3>
-                {[
-                  { label: "React & TypeScript", level: 85 },
-                  { label: "Tailwind CSS / UI Design", level: 80 },
-                  { label: "JavaScript / HTML / CSS", level: 90 },
-                ].map((skill) => (
-                  <div key={skill.label} className="mb-4">
-                    <div className="flex justify-between text-sm mb-1">
-                      <span>{skill.label}</span>
-                      <span>{skill.level}%</span>
-                    </div>
-                    <div className="w-full bg-blue-950/50 rounded-full h-2">
-                      <div
-                        className="h-2 bg-gradient-to-r from-blue-500 to-blue-300 rounded-full"
-                        style={{ width: `${skill.level}%` }}
-                      ></div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              {/* Tools */}
-              <div>
-                <h3 className="text-xl font-semibold text-blue-300 mb-4">
-                  🧰 Tools & Practices
-                </h3>
-                {[
-                  { label: "Git / GitHub", level: 90 },
-                  { label: "VS Code / Linux", level: 85 },
-                  { label: "Agile / Jira / Confluence", level: 80 },
-                ].map((skill) => (
-                  <div key={skill.label} className="mb-4">
-                    <div className="flex justify-between text-sm mb-1">
-                      <span>{skill.label}</span>
-                      <span>{skill.level}%</span>
-                    </div>
-                    <div className="w-full bg-blue-950/50 rounded-full h-2">
-                      <div
-                        className="h-2 bg-gradient-to-r from-blue-500 to-blue-300 rounded-full"
-                        style={{ width: `${skill.level}%` }}
-                      ></div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
+          {/* Skills Section */}
+          <Skills />
         </div>
       </section>
       {/* Certifications Section */}
       <motion.section
-        className="py-20 px-6 bg-black text-blue-200"
+        className="py-10 px-8 bg-black text-blue-200"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
@@ -646,7 +353,7 @@ export default function Hero() {
       </motion.section>
       {/* Volunteer Experience */}
       <motion.section
-        className="py-20 px-8 bg-black text-blue-200"
+        className="py-10 px-8 bg-black text-blue-200"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
@@ -696,10 +403,82 @@ export default function Hero() {
           </motion.div>
         </div>
       </motion.section>
+      {/* Recommendations Section */}
+      <motion.section
+        className="py-10 px-8 bg-black text-blue-200"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl font-bold text-center text-blue-400 mb-4">
+            Recommendations
+          </h2>
+          <p className="text-blue-300 text-center text-lg mb-16">
+            Words from managers and colleagues who’ve seen my journey and impact
+            firsthand.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+            {[
+              {
+                name: "Lan Wang",
+                role: "Executive Director, J.P. Morgan Chase & Co.",
+                linkedin: "https://www.linkedin.com/in/lan-wang-85a8148/",
+                text: "Akhila is one of the most capable graduates I’ve worked with in my 20-year career. Beyond her strong technical competency, she showed exceptional ownership and professional maturity — rare qualities in someone early in their career.",
+              },
+              {
+                name: "Ajay Agrawal",
+                role: "Vice President, J.P. Morgan Chase & Co.",
+                linkedin: "https://www.linkedin.com/in/ajay-agrawal-7b77274/",
+                text: "Akhila consistently delivered high-quality, scalable solutions and managed her work end-to-end. Her quick learning ability, collaboration skills, and problem-solving mindset made her a highly dependable member of the team.",
+              },
+              {
+                name: "Unnati Sorathi",
+                role: "Software Engineer, J.P. Morgan Chase & Co.",
+                linkedin: "https://www.linkedin.com/in/unnatisorathi/",
+                text: "Working with Akhila was a privilege. She was always approachable, shared knowledge generously, and led by example. Her deep technical understanding and supportive nature make her an invaluable asset to any team.",
+              },
+            ].map((rec) => (
+              <motion.div
+                key={rec.name}
+                whileHover={{ scale: 1.03 }}
+                className="p-6 bg-gray-900 border border-blue-900/40 rounded-2xl shadow-xl text-left flex flex-col items-start"
+              >
+                {/* Profile Header */}
+                <div className="flex items-center mb-4 w-full">
+                  <div className="flex-1">
+                    <h3 className="text-lg font-semibold text-blue-200">
+                      {rec.name}
+                    </h3>
+                    <p className="text-sm text-blue-400">{rec.role}</p>
+                  </div>
+
+                  {/* LinkedIn Icon */}
+                  <a
+                    href={rec.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`${rec.name}'s LinkedIn`}
+                    className="text-blue-400 hover:text-blue-500 transition"
+                  >
+                    <FaLinkedin className="w-5 h-5" />
+                  </a>
+                </div>
+
+                {/* Quote */}
+                <p className="text-blue-200 text-sm leading-relaxed italic">
+                  “{rec.text}”
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </motion.section>
 
       <motion.section
         aria-labelledby="passion-heading"
-        className="py-24 px-6 bg-black text-blue-200"
+        className="py-10 px-6 bg-black text-blue-200"
         initial={appear}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
@@ -743,72 +522,47 @@ export default function Hero() {
               </motion.div>
             ))}
           </div>
-
-          {/* Team Traits */}
-          <h3 className="text-3xl font-bold text-center mt-20 text-blue-400">
-            How I Strengthen a Team
-          </h3>
-          <p className="text-lg text-center text-blue-200 mt-4 max-w-3xl mx-auto leading-relaxed">
-            Curiosity, ownership, and engineering rigor—so solutions serve
-            users, scale with business, and stay reliable.
+        </div>
+      </motion.section>
+      {/* Why Hire Me Section */}
+      <motion.section
+        className="py-10 px-8 bg-black text-blue-200"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
+        <div className="max-w-6xl mx-auto text-center">
+          <h2 className="text-4xl font-bold text-blue-400 mb-6">
+            Why Should You Hire Me?
+          </h2>
+          <p className="text-blue-300 text-lg mb-16 max-w-3xl mx-auto leading-relaxed">
+            Because I combine the precision of an engineer, the curiosity of a
+            researcher, and the empathy of a teammate. I build systems that not
+            only scale — but truly serve people.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-12 text-center">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             {[
               {
                 icon: (
-                  <Lightbulb
+                  <Code2
                     className="w-10 h-10 text-blue-200 mx-auto mb-4"
                     aria-hidden="true"
                   />
                 ),
-                title: "Analytical Thinking",
-                text: "I simplify complex problems and deliver measurable wins.",
+                title: "End-to-End Ownership",
+                text: "From design to deployment, I take full responsibility for shipping production-ready systems that just work.",
               },
               {
                 icon: (
-                  <Users
+                  <Cloud
                     className="w-10 h-10 text-blue-200 mx-auto mb-4"
                     aria-hidden="true"
                   />
                 ),
-                title: "Leadership & Initiative",
-                text: "I take ownership, collaborate deeply, and raise the quality bar every sprint.",
+                title: "Cloud + ML Expertise",
+                text: "I bring hands-on experience across AWS, distributed systems, and ML pipelines — ensuring solutions that scale securely.",
               },
-              {
-                icon: (
-                  <Code
-                    className="w-10 h-10 text-blue-200 mx-auto mb-4"
-                    aria-hidden="true"
-                  />
-                ),
-                title: "Engineering Excellence",
-                text: "Clean, secure, scalable code that teams can build on.",
-              },
-            ].map(({ icon, title, text }) => (
-              <motion.div
-                key={title}
-                whileHover={hoverScale}
-                className="p-6 bg-gray-900 border border-blue-900/40 rounded-xl shadow-lg transition"
-              >
-                {icon}
-                <h4 className="text-xl font-semibold text-blue-300">{title}</h4>
-                <p className="text-blue-200 mt-2">{text}</p>
-              </motion.div>
-            ))}
-          </div>
-
-          {/* Values / Fit */}
-          <h3 className="text-3xl font-bold text-center mt-20 text-blue-400">
-            Why I’m a Great Fit
-          </h3>
-          <p className="text-lg text-center text-blue-200 mt-4 max-w-3xl mx-auto leading-relaxed">
-            I align emerging tech with business goals—shipping experiences that
-            matter to users and move metrics.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-12 text-center">
-            {[
               {
                 icon: (
                   <HeartHandshake
@@ -816,38 +570,20 @@ export default function Hero() {
                     aria-hidden="true"
                   />
                 ),
-                title: "Collaborative Spirit",
-                text: "I thrive in diverse, high-trust teams.",
-              },
-              {
-                icon: (
-                  <BrainCircuit
-                    className="w-10 h-10 text-blue-200 mx-auto mb-4"
-                    aria-hidden="true"
-                  />
-                ),
-                title: "Creative Curiosity",
-                text: "I learn fast and experiment responsibly to find better paths.",
-              },
-              {
-                icon: (
-                  <Rocket
-                    className="w-10 h-10 text-blue-200 mx-auto mb-4"
-                    aria-hidden="true"
-                  />
-                ),
-                title: "Agile & Adaptable",
-                text: "I adapt quickly as requirements evolve—without sacrificing quality.",
+                title: "Collaborative Mindset",
+                text: "I thrive in high-trust teams — balancing technical depth with communication, mentorship, and empathy.",
               },
             ].map(({ icon, title, text }) => (
               <motion.div
                 key={title}
-                whileHover={hoverScale}
-                className="p-6 bg-gray-900 border border-blue-900/40 rounded-xl shadow-lg transition"
+                whileHover={{ scale: 1.03 }}
+                className="p-6 bg-gray-900 border border-blue-900/40 rounded-2xl shadow-lg transition"
               >
                 {icon}
-                <h4 className="text-xl font-semibold text-blue-300">{title}</h4>
-                <p className="text-blue-200">{text}</p>
+                <h3 className="text-xl font-semibold text-blue-300 mb-2">
+                  {title}
+                </h3>
+                <p className="text-blue-200 text-sm leading-relaxed">{text}</p>
               </motion.div>
             ))}
           </div>
