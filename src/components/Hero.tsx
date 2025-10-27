@@ -417,19 +417,20 @@ export default function Hero() {
               {
                 name: "Lan Wang",
                 role: "Executive Director, J.P. Morgan Chase & Co.",
-                linkedin: "https://www.linkedin.com/in/lan-wang-85a8148/",
+                linkedin: "https://www.linkedin.com/in/lan-wang-03501832/",
                 text: "Akhila is one of the most capable graduates I’ve worked with in my 20-year career. Beyond her strong technical competency, she showed exceptional ownership and professional maturity — rare qualities in someone early in their career.",
               },
               {
                 name: "Ajay Agrawal",
                 role: "Vice President, J.P. Morgan Chase & Co.",
-                linkedin: "https://www.linkedin.com/in/ajay-agrawal-7b77274/",
+                linkedin: "https://www.linkedin.com/in/agrawalajay/",
                 text: "Akhila consistently delivered high-quality, scalable solutions and managed her work end-to-end. Her quick learning ability, collaboration skills, and problem-solving mindset made her a highly dependable member of the team.",
               },
               {
                 name: "Unnati Sorathi",
                 role: "Software Engineer, J.P. Morgan Chase & Co.",
-                linkedin: "https://www.linkedin.com/in/unnatisorathi/",
+                linkedin:
+                  "https://www.linkedin.com/in/unnati-sorathi-8516941b1/",
                 text: "Working with Akhila was a privilege. She was always approachable, shared knowledge generously, and led by example. Her deep technical understanding and supportive nature make her an invaluable asset to any team.",
               },
             ].map((rec) => (

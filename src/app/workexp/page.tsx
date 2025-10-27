@@ -41,37 +41,43 @@ export default function WorkPage() {
               <p className="text-blue-400 text-sm">Jan 2025 – Present</p>
             </div>
 
-            <p className="text-blue-200 leading-relaxed mb-4">
-              Bridging research and production by architecting end-to-end ML
-              infrastructure and full-stack platforms for large-scale
-              educational analytics.
+            <p className="text-blue-200 leading-relaxed mb-4 italic">
+              Building production-scale ML infrastructure and full-stack
+              analytics platforms for education research at scale.
             </p>
-            <ul className="list-disc list-inside text-blue-300 space-y-1">
+            <ul className="list-disc list-inside text-blue-300 space-y-2">
               <li>
-                Architected a production-grade video analytics pipeline
-                processing <strong>500+ hours monthly</strong>, enabling 50+
-                researchers to analyze student–tutor interactions in real time.
+                Architected a{" "}
+                <strong>production-scale media analytics platform</strong>{" "}
+                processing <strong>500+ hours monthly</strong>, designing an
+                event-driven microservices system using{" "}
+                <strong>Docker, Terraform, and AWS</strong> for 200+ education
+                researchers. Integrated <strong>AWS Cognito</strong> for secure
+                authentication and user management with role-based permissions.
               </li>
               <li>
-                Designed event-driven microservices using{" "}
-                <strong>AWS Lambda, SQS, and Batch</strong> with modular
-                infrastructure via Terraform.
+                Developed a <strong>full-stack analytics dashboard</strong>{" "}
+                using <strong>Next.js</strong> and <strong>Python</strong> with
+                RESTful APIs; implemented integration testing and code reviews.
+                Built interactive <strong>Talk Trees</strong> powered by
+                analytics results to visualize conversation patterns and
+                tutoring dynamics.
               </li>
               <li>
-                Developed full-stack analytics dashboard using{" "}
-                <strong>Next.js</strong> (ISR + REST APIs) and{" "}
-                <strong>Python</strong>, achieving 2s load times through CDN
-                caching and SSR optimization.
+                Optimized the <strong>ML inference pipeline</strong> on{" "}
+                <strong>AWS Batch</strong> with GPU acceleration and{" "}
+                <strong>SQS orchestration</strong>, reducing compute costs by{" "}
+                <strong>30%</strong> while maintaining a{" "}
+                <strong>99% job completion rate</strong> across production
+                workloads.
               </li>
               <li>
-                Optimized ML inference pipeline with GPU acceleration on AWS
-                Batch, reducing compute cost by <strong>30%</strong> while
-                maintaining 99% job completion.
-              </li>
-              <li>
-                Built automated data synchronization system between{" "}
-                <strong>DynamoDB</strong> and <strong>DocumentDB</strong> via
-                Lambda, ensuring consistency across 10K+ records.
+                Architected{" "}
+                <strong>distributed data synchronization system</strong> across{" "}
+                <strong>DynamoDB</strong> and <strong>DocumentDB</strong> with
+                Lambda-based orchestration, implementing{" "}
+                <strong>eventual consistency model</strong> with conflict
+                resolution for <strong>10K+ records</strong>.
               </li>
             </ul>
           </motion.div>
@@ -97,35 +103,54 @@ export default function WorkPage() {
               <p className="text-blue-400 text-sm">Feb 2022 – Aug 2024</p>
             </div>
 
-            <p className="text-blue-200 leading-relaxed mb-4">
-              Delivered scalable, secure banking systems powering institutional
-              investor platforms. Worked across full-stack and DevOps layers to
-              ensure reliability, compliance, and feature velocity.
+            <p className="text-blue-200 leading-relaxed mb-4 italic">
+              Built distributed microservices and cloud infrastructure for
+              institutional banking platforms serving 500+ clients and
+              processing $2B+ in transactions.
             </p>
 
-            <ul className="list-disc list-inside text-blue-300 space-y-1">
+            <ul className="list-disc list-inside text-blue-300 space-y-2">
               <li>
-                Delivered <strong>50+ production features</strong> across React
-                frontends and Spring Boot microservices with 90%+ unit coverage.
+                Delivered <strong>50+ production features</strong> for
+                institutional banking platform serving{" "}
+                <strong>500+ clients</strong> through cross-functional
+                collaboration, building <strong>React frontends</strong> and{" "}
+                <strong>Spring Boot microservices</strong> with{" "}
+                <strong>90%+ test coverage</strong> using unit testing and
+                integration testing in Agile methodologies.
               </li>
               <li>
-                Led AWS cloud migration for four critical banking apps
-                supporting <strong>$2B+ transactions</strong>, reducing infra
-                cost by <strong>30%</strong>.
+                Led <strong>cloud infrastructure migration</strong> of four
+                banking applications supporting{" "}
+                <strong>$2B+ in transactions</strong> to{" "}
+                <strong>Amazon Web Services (AWS)</strong>, implementing{" "}
+                <strong>blue/green deployment</strong> and{" "}
+                <strong>CI/CD pipelines</strong> with zero downtime, reducing
+                infrastructure costs by <strong>30%</strong>.
               </li>
               <li>
-                Built a <strong>SCIM 2.0-compliant REST API</strong> with JWT
-                auth and audit logging, automating access reviews for 10,000+
-                user accounts and cutting manual audits by <strong>65%</strong>.
+                Built{" "}
+                <strong>high-throughput investor onboarding system</strong>{" "}
+                processing{" "}
+                <strong>1,000+ daily KYC verifications at 50 TPS</strong> using{" "}
+                <strong>Apache Kafka event streaming</strong>, achieving{" "}
+                <strong>&lt;500ms p99 latency</strong> with distributed
+                microservices architecture.
               </li>
               <li>
-                Implemented Kafka-based investor onboarding service processing
-                1,000+ verifications daily, reducing processing time from 48h to
-                2h.
+                Developed <strong>SCIM 2.0-compliant REST application</strong>{" "}
+                for automated user onboarding and access certification
+                maintenance across <strong>10,000+ accounts</strong>, reducing
+                quarterly review time from <strong>2 weeks to 2 days</strong>{" "}
+                and eliminating <strong>65% of manual audits</strong>.
               </li>
               <li>
-                Orchestrated 20+ production releases via Jenkins CI/CD with
-                rollback automation, reducing MTTR by <strong>45%</strong>.
+                Orchestrated <strong>20+ production system releases</strong> via{" "}
+                <strong>Jenkins CI/CD pipelines</strong> with code reviews,
+                automated unit testing, integration testing, and rollback
+                capabilities, reducing{" "}
+                <strong>mean time to recovery by 45%</strong> and maintaining{" "}
+                <strong>99.9% uptime</strong>.
               </li>
             </ul>
           </motion.div>
@@ -158,18 +183,11 @@ export default function WorkPage() {
 
             <ul className="list-disc list-inside text-blue-300 space-y-1">
               <li>
-                Built automated deal monitoring system using{" "}
+                Built <strong>automated deal monitoring system</strong> using{" "}
                 <strong>Akka scheduler</strong> to trigger distributed workflows
-                for high-concurrency trading.
-              </li>
-              <li>
-                Automated CI/CD pipelines using <strong>Jenkins</strong>,{" "}
-                <strong>SonarQube</strong>, and <strong>Selenium</strong>,
-                improving test reliability.
-              </li>
-              <li>
-                Contributed to SQL query optimization, feature development, and
-                production issue resolution.
+                in <strong>high-concurrency trading platform</strong>, reducing
+                manual intervention and enabling real-time trade processing for
+                production systems.
               </li>
             </ul>
           </motion.div>

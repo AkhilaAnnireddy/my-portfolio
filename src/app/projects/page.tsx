@@ -7,6 +7,25 @@ import { Code, ExternalLink } from "lucide-react";
 const projects = [
   {
     id: 1,
+    title: "TripSync: Cloud-Native Trip Coordination Platform",
+    techStack: [
+      "Java",
+      "Spring Boot",
+      "AWS SQS",
+      "AWS SES",
+      "AWS RDS",
+      "PostgreSQL",
+      "Terraform",
+      "React",
+      "Mapbox",
+      "JWT",
+    ],
+    description:
+      "Built a cloud-native microservices platform for collaborative trip planning with task management and expense tracking. Implemented event-driven architecture using AWS SQS and SES for asynchronous service communication. Deployed on AWS EC2 and RDS via Terraform IaC with CloudWatch logging. Features React + Mapbox frontend with geospatial visualization and Kanban-style task boards, secured with JWT authentication.",
+    link: "https://github.com/AkhilaAnnireddy/TripSync",
+  },
+  {
+    id: 2,
     title: "Minutes Maker: Serverless Meeting Summarization",
     techStack: [
       "AWS Lambda",
@@ -23,7 +42,7 @@ const projects = [
     link: "https://github.com/AkhilaAnnireddy/Minutes-Maker",
   },
   {
-    id: 2,
+    id: 3,
     title: "StackStats: Stack Overflow Analytics Dashboard",
     techStack: ["ReactJS", "ChartJS", "Stack Overflow API", "JavaScript"],
     description:
@@ -31,7 +50,7 @@ const projects = [
     link: "https://github.com/AkhilaAnnireddy/stackstats",
   },
   {
-    id: 3,
+    id: 4,
     title: "EduBlog: University Blogging & Collaboration Platform",
     techStack: ["Django", "HTML", "CSS", "Bootstrap", "SQLite"],
     description:
@@ -39,7 +58,7 @@ const projects = [
     link: "https://github.com/AkhilaAnnireddy/edublog",
   },
   {
-    id: 4,
+    id: 5,
     title: "Autism Detection using 3D CNN",
     techStack: [
       "Python",
@@ -51,7 +70,7 @@ const projects = [
       "3D CNN",
     ],
     description:
-      "Published in Springer’s *Machine Vision and Augmented Intelligence* (ISBN: 978-981-97-4359-9), this research introduced a 3D Convolutional Neural Network to classify Autism Spectrum Disorder from fMRI brain scans using the ABIDE dataset. The pipeline included rigorous preprocessing (resampling, noise removal, augmentation), mining hidden biomarkers, and preserving spatial-temporal features for diagnosis. Achieved 90% classification accuracy, outperforming SVM, Decision Trees, and Logistic Regression. Deployed as a Flask-based web app with a diagnosis display and recommendation system, enabling early detection and treatment suggestions.",
+      "Published in Springer's *Machine Vision and Augmented Intelligence* (ISBN: 978-981-97-4359-9), this research introduced a 3D Convolutional Neural Network to classify Autism Spectrum Disorder from fMRI brain scans using the ABIDE dataset. The pipeline included rigorous preprocessing (resampling, noise removal, augmentation), mining hidden biomarkers, and preserving spatial-temporal features for diagnosis. Achieved 90% classification accuracy, outperforming SVM, Decision Trees, and Logistic Regression. Deployed as a Flask-based web app with a diagnosis display and recommendation system, enabling early detection and treatment suggestions.",
     link: "https://github.com/AkhilaAnnireddy/autism_spectrum_detection",
     publication:
       "Springer Nature — Machine Vision and Augmented Intelligence (2025)",
@@ -76,7 +95,8 @@ export default function Projects() {
           <p className="text-lg text-blue-300">
             A collection of my work spanning{" "}
             <strong className="text-blue-400">
-              full-stack development, AI, machine learning, and cloud computing
+              full-stack development, cloud-native architectures, AI, and
+              distributed systems
             </strong>
             .
           </p>
@@ -109,6 +129,11 @@ export default function Projects() {
               <p className="text-blue-200 text-sm mb-4">
                 {project.description}
               </p>
+              {project.publication && (
+                <p className="text-blue-400 text-xs italic mb-2">
+                  📚 {project.publication}
+                </p>
+              )}
               <Link
                 href={project.link}
                 target="_blank"
