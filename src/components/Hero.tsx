@@ -16,6 +16,9 @@ import {
   Cloud,
   ArrowRight,
   BadgeCheck,
+  Github,
+  Linkedin,
+  Mail,
 } from "lucide-react";
 import { FaLinkedin } from "react-icons/fa";
 export default function Hero() {
@@ -125,6 +128,36 @@ export default function Hero() {
                 <ArrowRight className="h-4 w-4" aria-hidden="true" />
               </motion.span>
             </Link>
+          </div>
+          {/* Contact Links (hero section) */}
+          <div className="mt-8 flex justify-center lg:justify-start gap-8">
+            <motion.a
+              href="https://github.com/AkhilaAnnireddy"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.1, rotate: 5 }}
+              className="text-blue-300 hover:text-blue-500 transition-colors"
+            >
+              <Github className="h-7 w-7" />
+            </motion.a>
+
+            <motion.a
+              href="https://linkedin.com/in/akhilaannireddy"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.1, rotate: -5 }}
+              className="text-blue-300 hover:text-blue-500 transition-colors"
+            >
+              <Linkedin className="h-7 w-7" />
+            </motion.a>
+
+            <motion.a
+              href="mailto:akhila.annireddy@coloradu.edu"
+              whileHover={{ scale: 1.1, rotate: 5 }}
+              className="text-blue-300 hover:text-blue-500 transition-colors"
+            >
+              <Mail className="h-7 w-7" />
+            </motion.a>
           </div>
         </motion.div>
       </motion.section>
