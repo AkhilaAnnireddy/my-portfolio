@@ -75,6 +75,23 @@ const projects = [
     publication:
       "Springer Nature — Machine Vision and Augmented Intelligence (2025)",
   },
+  {
+    id: 6,
+    title:
+      "Predicting Pharmaceutical Wastewater Concentrations from Community Demographics",
+    techStack: [
+      "Python",
+      "Machine Learning",
+      "Data Science",
+      "Environmental Modeling",
+      "Community Demographics",
+      "Wastewater Analysis",
+    ],
+    description:
+      "This research leverages machine learning to predict the concentrations of over 200 pharmaceuticals in wastewater influent using community demographic features. By modeling how demographic and temporal variations influence pharmaceutical usage, the study provides adaptable, data-driven risk assessment tools applicable to any U.S. community. The work demonstrates multiple case simulations across regions of varying population sizes and profiles, offering an innovative framework for environmental monitoring, wastewater reuse, and pharmaceutical risk management.",
+    publication: "Journal of Environmental Data Science (2025)",
+    link: "https://github.com/UCBoulder/SewerSocial",
+  },
 ];
 
 export default function Projects() {
