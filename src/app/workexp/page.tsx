@@ -119,7 +119,7 @@ export default function WorkPage() {
                 <strong>90%+ test coverage</strong> using unit testing and
                 integration testing in Agile methodologies.
               </li>
-              <li>
+              {/* <li>
                 Led <strong>cloud infrastructure migration</strong> of four
                 banking applications supporting{" "}
                 <strong>$2B+ in transactions</strong> to{" "}
@@ -136,7 +136,7 @@ export default function WorkPage() {
                 <strong>Apache Kafka event streaming</strong>, achieving{" "}
                 <strong>&lt;500ms p99 latency</strong> with distributed
                 microservices architecture.
-              </li>
+              </li> */}
               <li>
                 Developed <strong>SCIM 2.0-compliant REST application</strong>{" "}
                 for automated user onboarding and access certification
